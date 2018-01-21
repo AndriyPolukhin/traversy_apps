@@ -1,0 +1,38 @@
+// We are using the omdbapi.com to fetch data from
+
+// Here I've obtainer a day key: 21/01/2017
+// http://www.omdbapi.com/?i=tt3896198&apikey=13904095
+
+// THE Basic usage is:
+Send all data requests to:
+http://www.omdbapi.com/?apikey=[yourkey]&
+
+Poster API requests:
+http://img.omdbapi.com/?apikey=[yourkey]&
+
+// @param: by Id, by Title, by Search
+
+
+// Also we are using Axios
+npm install axios
+OR
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+
+// We are using the customized bootstrap theme 
+// https://bootswatch.com/
+// CYBORG
+// just grab a link:
+https://bootswatch.com/4/cyborg/bootstrap.min.css
+
+
+// We create a branded navbar
+// we create a umbotron with a search form
+
+// Now we add some script libraires:
+// jquery
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  
