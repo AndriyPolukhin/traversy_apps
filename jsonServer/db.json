@@ -1,0 +1,53 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "firstName": "Andriy",
+      "lastName": "Polukhin",
+      "email": "andriy.polukhin@gmail.com",
+      "age": 32,
+      "companyId": "3"
+    },
+    {
+      "id": "2",
+      "firstName": "Anastasia",
+      "lastName": "Polukhina",
+      "email": "anastasia.tsukrova@gmail.com",
+      "age": 28,
+      "companyId": "2"
+    },
+    {
+      "id": "3",
+      "firstName": "Olga",
+      "lastName": "Polukhina",
+      "email": "olga.polukhina@gmail.com",
+      "age": 32,
+      "companyId": "2"
+    },
+    {
+      "id": "vetyuio",
+      "firstName": "Alexandra",
+      "lastName": "Kondratenko",
+      "age": 23,
+      "email": "sandra@gmail.com",
+      "companyId": 3
+    }
+  ],
+  "companies": [
+    {
+      "id": "1",
+      "name": "Apple",
+      "descriptoin": "Apple inc. .is an American multinaitonal techology compnay headquarters in Cupertino, California that designs, develops and sells consumer electronics, computer software, and online services...Its online services include the iTunes Store, the iOS App Store and Mac App Store, Apple Music, and iCloud"
+    },
+    {
+      "id": "2",
+      "name": "Microsoft",
+      "descriptoin": "Microsoft Corporation, incorporated on September 22, 1993, is a technology company. The Company develops, licenses, and supports a range of software products, services and devices. The Company's segments include Productivity and Business Processes, Intelligent Cloud and More Personal Computing"
+    },
+    {
+      "id": "3",
+      "name": "Google",
+      "descriptoin": "Google was founded by Larry Page and Sergey Brin while they were students at Stanford University. The company was officially launched in September, 1998 in a friend's garage. ... The official mission statement of the company is to 'organize the world's information and make it universally accessible and userful'"
+    }
+  ]
+}
