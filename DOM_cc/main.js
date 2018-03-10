@@ -37,6 +37,7 @@ function addItem(e) {
 itemList.addEventListener("click", removeItem);
 // 3.2 Create a removeItem function
 function removeItem(e) {
+    var start = performance.now();
     e.preventDefault();
     // 3.2.1 Check if the li is pressed where the el contian delete
     if(e.target.classList.contains("delete")) {
@@ -45,6 +46,8 @@ function removeItem(e) {
             itemList.removeChild(li);
         }
     }
+    var end = performance.now();
+    console.log("To remove took " + (end - start) + " ms");
 }
 
 // 4. Filter the Elements of the list
@@ -68,3 +71,22 @@ function filterItems(e) {
     });
 }
 
+// Meassearing load time performance
+window.addEventListener("load", function() {
+    setTimeout(function() {
+        var timing = window.performance.timing;
+        var userTime = timing.loadEventEnd - timing.navigationsStart;
+    }, 0);
+}, false);
+
+// Battery Api Test
+navigator.getBattery()
+        .then(function(battery) {
+            LogBatteryLevel();
+            battery.addEventListener(
+                "levelchange", LogBatteryLevel);
+            function LogBatteryLevel() {
+                var bat = battery.level  * 100;
+                console.log(`Level: ${bat}%`);
+        }
+        });
