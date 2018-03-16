@@ -2,7 +2,7 @@
 const countdown = document.querySelector(".countdown");
 
 // Set the launch date (ms)
-const launchDate = new Date('May 6, 2018 13:00:00').getTime();
+const launchDate = new Date('April 1, 2018 13:00:00').getTime();
 // console.log(launchDate);
 
 // Set the updater for every second
