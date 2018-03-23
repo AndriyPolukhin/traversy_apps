@@ -2,8 +2,9 @@
     box-sizing: border-box;
 }
 
-html,body {
-    margin:0;
+html,
+body {
+    margin: 0;
     /* padding: 0; */
     font-family: Arial, Helvetica, sans-serif;
     color: #fff;
@@ -16,7 +17,8 @@ html,body {
     background-image: url("../img/fp.png");
     background-size: cover;
     background-position: center;
-    height: 100vh; 
+    height: 100vh;
+    
 }
 
 .landing-inner {
@@ -56,12 +58,10 @@ html,body {
 }
 
 .countdown div:first-child {
-    background:#17a2b8;
-    background:yellow;
+    background: #17a2b8;
+    background: yellow;
     color: #000;
 }
-
-
 
 .countdown span {
     display: block;
@@ -69,30 +69,34 @@ html,body {
 }
 
 .main-logo {
-    
-    width: 12%;
+    width: 25%;
     max-width: 600px;
 }
 
+@media(min-width: 1600px) {
+    .landing h1 {
+        font-size: 45px;
+    }
+    img.main-logo {
+        width: 25%;
+        max-width: 600px;
+    }
+}
 
 @media(max-width: 600px) {
     .landing img {
         width: 70%;
     }
-
     .landing h1 {
         font-size: 40px;
     }
-
     .countdown {
         font-size: 30px;
         flex-direction: column;
     }
-
     .countdown div {
         display: none;
     }
-
     .countdown div:first-child {
         display: block;
         width: 80%;
@@ -104,8 +108,7 @@ html,body {
     img {
         width: 30%;
     }
-
-    p {
+    h2 {
         display: none;
     }
 }
