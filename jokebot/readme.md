@@ -1,4 +1,4 @@
-CHACK NORIS JOKE GENERATOR BOT
+CHUCK NORIS JOKE GENERATOR BOT
 API's:
 http://www.icndb.com/api/
 http://api.yomomma.info/
