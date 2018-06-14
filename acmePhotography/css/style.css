@@ -73,6 +73,7 @@ main {
 
 .btn:hover {
   background: #f4f4f4;
+  box-shadow: 1px 2px 3px 0px rgba(0, 0, 0, 0.2);
 }
 
 #header {
