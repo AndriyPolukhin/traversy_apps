@@ -1,0 +1,35 @@
+var myString;
+var myNum;
+var myBool;
+var myVar;
+/*
+let strArr: string[];
+let numArr: number[];
+let boolArr: boolean[];
+*/
+var strArr;
+var numArr;
+var boolArr;
+var strNumTuple;
+myString = "Hello".slice(0, 3);
+myNum = 10;
+myBool = true;
+myVar = true;
+strArr = ["Hello", "world"];
+numArr = [1, 2, 3, 4];
+boolArr = [true, false, true];
+strNumTuple = ["Hello", 4];
+var myVoid = undefined;
+var myNull = null;
+var myUndefined = null;
+console.log(myVoid);
+console.log(myNull);
+console.log(myUndefined);
+// console.log(strNumTuple);
+// console.log(myString);
+// console.log(myNum);
+// console.log(myBool);
+// console.log(myVar);
+// console.log(strArr);
+// console.log(numArr);
+// console.log(boolArr);
