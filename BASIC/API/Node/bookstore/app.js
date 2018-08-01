@@ -4,6 +4,9 @@ const app = express();
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
+// Set the folder to use as a public directory
+app.use(express.static(__dirname + './client'));
+
 // Initiate the body Parser and format (a must for post request)
 app.use(bodyParser.json());
 
