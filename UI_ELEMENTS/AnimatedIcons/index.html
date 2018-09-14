@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+  <title>Animated Icons</title>
+</head>
+
+<body>
+
+  <div id="chain" class="fas fa-10x"></div>
+  <br />
+  <div id="battery" class="fas fa-10x"></div>
+  <br />
+  <div id="hourglass" class="fas fa-10x"></div>
+
+
+  <script>
+    // 1. Brake chain animation
+    function brakeChain() {
+      let chain = document.getElementById('chain');
+      chain.innerHTML = "&#xf0c1;";
+
+      setTimeout(function () {
+        chain.innerHTML = "&#xf127;";
+      }, 1000);
+    }
+    // Call animation
+    brakeChain();
+
+    // Animate any 2 seconds
+    setInterval(brakeChain, 2000);
+
+    // 2. Battery charge animation
+    function chargeBattery() {
+      let battery = document.getElementById('battery');
+      battery.innerHTML = "&#xf244;";
+      setTimeout(function () {
+        battery.innerHTML = "&#xf243;";
+      }, 1000);
+      setTimeout(function () {
+        battery.innerHTML = "&#xf242;";
+      }, 2000);
+      setTimeout(function () {
+        battery.innerHTML = "&#xf241;";
+      }, 3000);
+      setTimeout(function () {
+        battery.innerHTML = "&#xf240;";
+      }, 4000);
+    }
+    // Run Animation
+    chargeBattery();
+    //Repeat Every 5 seconds
+    setInterval(chargeBattery, 5000);
+
+    // 3. HourGlass Tip Animation
+    function hourglassTip() {
+      let hourglass = document.getElementById('hourglass');
+      hourglass.innerHTML = "&#xf251;";
+      setTimeout(function () {
+        hourglass.innerHTML = "&#xf252;";
+      }, 1000);
+      setTimeout(function () {
+        hourglass.innerHTML = "&#xf253;";
+      }, 2000);
+    }
+
+    // Run the animation
+    hourglassTip();
+    // Repeat every 5 seconds
+    setInterval(hourglassTip, 3000);
+
+  </script>
+</body>
+
+</html>
