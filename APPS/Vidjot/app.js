@@ -4,14 +4,22 @@
 */
 
 // 1. DEPENDENCIES
+// 1.1. Main Express
 const express = require('express');
 const port = 5000;
+const path = require('path');
+// 1.2 Engine and method override
 const exphbs = require('express-handlebars');
 const methodOverride = require('method-override');
 const flash = require('connect-flash');
+// 1.3 Database and session
 const session = require('express-session');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+// 1.4 Load routes
+const ideas = require('./routes/ideas');
+const users = require('./routes/users');
+
 
 
 // 2. Init the app variable
@@ -26,9 +34,7 @@ mongoose.connect('mongodb://localhost/vidjot-dev', {
   .then(() => console.log('MongoDB Connected...'))
   .catch(err => console.log(err));
 
-// 4. LOAD IDEA MODEL
-require('./models/Idea');
-const Idea = mongoose.model('ideas');
+
 
 // 5. MIDDLEWARE
 // 5.1 Handlerbars
@@ -36,6 +42,7 @@ app.engine('handlebars', exphbs({
   defaultLayout: 'main'
 }));
 app.set('view engine', 'handlebars');
+app.use(express.static(path.join(__dirname, 'public')));
 
 // 5.2 Body Parser
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -62,7 +69,7 @@ app.use((req, res, next) => {
   next();
 });
 
-// 6. Set the routers
+// 6. ROUTES:
 
 // 6.1 INDEX ROUTE
 app.get('/', (req, res) => {
@@ -77,92 +84,10 @@ app.get('/about', (req, res) => {
   res.render('about');
 });
 
-// 6.3 IDEA INDEX PAGE
-app.get('/ideas', (req, res) => {
-  Idea.find({})
-    .sort({
-      date: 'desc'
-    })
-    .then(ideas => {
-      res.render('ideas/index', {
-        ideas: ideas
-      });
-    });
-});
+// 6.3 USE ROUTES
+app.use('/ideas', ideas);
+app.use('/users', users);
 
-// 6.3 ADD IDEA FORM
-app.get('/ideas/add', (req, res) => {
-  res.render('ideas/add');
-});
-
-// 6.4 EDIT IDEA FORM
-app.get('/ideas/edit/:id', (req, res) => {
-  Idea.findOne({
-    _id: req.params.id
-  })
-    .then(idea => {
-      res.render('ideas/edit', {
-        idea: idea
-      });
-    });
-});
-
-// 6.5 PROCESS FORM // CATCH THE DATA
-app.post('/ideas', (req, res) => {
-  let errors = [];
-  if (!req.body.title) {
-    errors.push({ text: 'Please add a title' });
-  }
-  if (!req.body.details) {
-    errors.push({ text: 'Please add some details' });
-  }
-  if (errors.length > 0) {
-    res.render('ideas/add', {
-      errors: errors,
-      title: req.body.title,
-      details: req.body.details
-    });
-  } else {
-    const newUser = {
-      title: req.body.title,
-      details: req.body.details
-    }
-    new Idea(newUser)
-      .save()
-      .then(idea => {
-        req.flash('success_msg', 'Video idea added');
-        res.redirect('/ideas');
-      })
-  }
-});
-
-
-// 6.6. EDIT FROM PROCESS
-app.put('/ideas/:id', (req, res) => {
-  Idea.findOne({
-    _id: req.params.id
-  })
-    .then(idea => {
-      // New Values
-      idea.title = req.body.title;
-      idea.details = req.body.details;
-
-      idea.save()
-        .then(idea => {
-          req.flash('success_msg', 'Video idea updated');
-          res.redirect('/ideas');
-        });
-    });
-});
-
-// 6.7 DELETE AN IDEA
-app.delete('/ideas/:id', (req, res) => {
-  Idea.deleteOne({ _id: req.params.id })
-    .then(() => {
-      req.flash('success_msg', 'Video Idea Removed');
-      res.redirect('/ideas');
-    });
-});
 
 
 // 7. SERVER LISTEN
