@@ -1,5 +1,5 @@
 /*
-* USERS SCHEMA / MODEL
+* USER SCHEMA / MODEL
 *
 */
 

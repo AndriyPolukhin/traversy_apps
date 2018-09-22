@@ -15,23 +15,26 @@ const flash = require('connect-flash');
 // 1.3 Database and session
 const session = require('express-session');
 const bodyParser = require('body-parser');
+const passport = require('passport');
 const mongoose = require('mongoose');
-// 1.4 Load routes
-const ideas = require('./routes/ideas');
-const users = require('./routes/users');
-
 
 
 // 2. Init the app variable
 const app = express();
+// 2.2 Load routes
+const ideas = require('./routes/ideas');
+const users = require('./routes/users');
+// 2.3 Load the passport configs
+require('./config/passport')(passport);
 
 // Map global promise - get rid of warning
 mongoose.Promise = global.Promise;
 // 3. Connect to mongoose
 mongoose.connect('mongodb://localhost/vidjot-dev', {
-  useNewUrlParser: true
+  useNewUrlParser: true,
+  // useMongoClient: true
 })
-  .then(() => console.log('MongoDB Connected...'))
+  .then((res) => console.log('MongoDB Connected...'))
   .catch(err => console.log(err));
 
 
@@ -57,20 +60,23 @@ app.use(session({
   resave: true,
   saveUninitialized: true
 }));
+// 5.5 Passport Middleware
+app.use(passport.initialize());
+app.use(passport.session());
 
 // 5.5. FLASH CONNECT
 app.use(flash());
 
 // 5.6 GLOBAL VARIABLES
-app.use((req, res, next) => {
+app.use(function (req, res, next) {
   res.locals.success_msg = req.flash('success_msg');
   res.locals.error_msg = req.flash('error_msg');
   res.locals.error = req.flash('error');
+  res.locals.user = req.user || null;
   next();
 });
 
 // 6. ROUTES:
-
 // 6.1 INDEX ROUTE
 app.get('/', (req, res) => {
   const title = 'Welcome';
