@@ -31,10 +31,10 @@ require('./config/passport')(passport);
 mongoose.Promise = global.Promise;
 // 3. Connect to mongoose
 mongoose.connect('mongodb://localhost/vidjot-dev', {
-  useNewUrlParser: true,
-  // useMongoClient: true
+  // useNewUrlParser: true,
+  useMongoClient: true
 })
-  .then((res) => console.log('MongoDB Connected...'))
+  .then(() => console.log('MongoDB Connected...'))
   .catch(err => console.log(err));
 
 

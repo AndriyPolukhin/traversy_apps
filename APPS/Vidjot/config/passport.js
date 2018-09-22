@@ -1,41 +1,37 @@
-/*
-* CONFIGURATION FOR AUTHENTIFICATION
+/*===============================================
+* PASSPORT CONFIGURATION
 *
 */
 
 // 1. DEPENDENCIES
-// 1.1 Main Dep
-// const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
-// 1.2 MODEL
+
+// 2. Load user model
 const User = mongoose.model('users');
 
-
-// Export
+// 3. EXPORT THE CONFIGS
 module.exports = function (passport) {
-  passport.use(new LocalStrategy({
-    usernameField: 'email',
-    passwordField: 'password'
-  }, function (email, password, done) {
-    // Match the user
+  passport.use(new LocalStrategy({ usernameField: 'email' }, (email, password, done) => {
+    // 3.1 Match user
     User.findOne({
       email: email
     }).then(user => {
       if (!user) {
-        return done(null, false, { message: 'No user found' });
+        return done(null, false, { message: 'No User Found' });
       }
-      // Match password
-      bcrypt.compare(password, user.passowrd, (err, isMatch) => {
+
+      // 3.2 Match password
+      bcrypt.compare(password, user.password, (err, isMatch) => {
         if (err) throw err;
         if (isMatch) {
           return done(null, user);
         } else {
-          return done(null, false, { message: 'Password incorect' });
+          return done(null, false, { message: 'Password Incorrect' });
         }
-      });
-    });
+      })
+    })
   }));
 
   passport.serializeUser(function (user, done) {

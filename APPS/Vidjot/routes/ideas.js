@@ -6,8 +6,8 @@
 // 1. DEPENDENCIES
 // 1.2 Main Framework
 const express = require('express');
-const router = express.Router();
 const mongoose = require('mongoose');
+const router = express.Router();
 // 1.2. LOAD IDEA MODEL
 require('../models/Idea');
 const Idea = mongoose.model('ideas');
@@ -16,9 +16,7 @@ const Idea = mongoose.model('ideas');
 // 2.1 IDEA INDEX PAGE
 router.get('/', (req, res) => {
   Idea.find({})
-    .sort({
-      date: 'desc'
-    })
+    .sort({ date: 'desc' })
     .then(ideas => {
       res.render('ideas/index', {
         ideas: ideas

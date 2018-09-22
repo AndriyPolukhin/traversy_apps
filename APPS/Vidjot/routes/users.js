@@ -32,7 +32,6 @@ router.post('/login', (req, res, next) => {
   passport.authenticate('local', {
     successRedirect: '/ideas',
     failureRedirect: '/users/login',
-    // badRequestMessage: 'So What happened? Missing Credentials?',
     failureFlash: true
   })(req, res, next);
 });
