@@ -1,0 +1,33 @@
+/*
+* REQUIREMENTS
+*
+*/
+
+### LOCAL AUTHENTICATION WITH EXPRESS 4.x and Passport.js
+
+
+## Stages
+
+## 1. HTML FORM ( <form></form>, action, method )
+## 2. BODY PARSER MIDDLEWARE
+## 3. DATA STRUCTURE TO REPRESENT THE ENTITIES (MODEL / SCHEMA / MONGOOSE)
+## 4. DATABASE FOR PERSISTANT AUTHENTICATION (MongoDB)
+## 5. SESSION MANAGEMENT ( cookie based / session store based / EXPRESS-SESSION)
+## 6. USE PASSPORTjs nad BCRYPTjs to create a LocalStrategy for authentication
+
+
+## TOOLING:
+# 1. ‘express 4.x’ (web app framework)
+# 2. ‘body-parser’ (extract POST data from HTTP request)
+# 3. ‘express-session’ (session store based session management middleware)
+# 4.‘connect-mongo’ (an ‘express-session’ compatible dBase connector to implement a session store on MongoDB),
+# 5.‘mongoose’ (MongoDB ORM for user data modelling),
+# 6. ‘passport’ (Authentication middleware for ‘express’),
+# 7. ‘passport-local’ (local authentication implementer for passport)
+# 8. ‘ejs’ (templating engine for express).
+
+## Supporting libraries:
+# 1. ‘morgan’ (for logging)
+# 2.‘should’ (BDD assertion library for express)
+# 3. ‘supertest’ (powerful assertion library for testing RESTful endpoints)
+# 4. ‘mocha’ (test runner).
