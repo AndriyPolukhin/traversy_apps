@@ -15,7 +15,7 @@ function errHandler(err) {
 }
 // 2. VALIDATION ERROR
 function validationErr(err, res) {
-  Object.keys(err.errors).forEach(function (k) {
+  Object.keys(err.errors).forEach((k) => {
     const msg = err.errors[k].message;
     console.error('Validation error for \'%s' + ': %s', k, msg);
     return res.status(404).json({
@@ -28,7 +28,7 @@ function cr8NewUser(req, res) {
   return UserModel.create({
     email: req.body.email,
     password: req.body.passowrd,
-  }, function (err, user) {
+  }, (err, user) => {
     if (err) {
       console.error('There was an error creating the user');
       console.error(err.code);
@@ -47,13 +47,14 @@ function cr8NewUser(req, res) {
       id: user._id,
       email: user.email
     });
-  })
+  });
 }
 
 // 4. FIND USER
 function findUser(req, res) {
-  return UserModel.findOne({ email: req.params.email }, 'email',
-    function (err, user) {
+  return UserModel.findOne(
+    { email: req.params.email }, 'email',
+    (err, user) => {
       if (err) {
         return errHandler(err);
       }
@@ -64,25 +65,29 @@ function findUser(req, res) {
       }
       console.log(user.email);
       return res.json(user);
-    })
+    }
+  );
 }
 
 // 5. VIEW ALL USERS
 function viewAllUsers(req, res) {
-  return UserModel.find({},
-    function (err, users) {
+  return UserModel.find(
+    {},
+    (err, users) => {
       if (err) {
         return errHandler(err);
       }
       console.log(users);
       return res.json(users);
-    });
+    }
+  );
 }
 
-// 6. UPDATE USERS
+// 6. UPDATE USER
 function updateUser(req, res) {
-  return UserModel.findOne({ email: req.params.email },
-    function (err, user) {
+  return UserModel.findOne(
+    { email: req.params.email },
+    (err, user) => {
       if (err) {
         return errHandler(err);
       }
@@ -96,12 +101,13 @@ function updateUser(req, res) {
         console.log('User updated: ', user);
         return res.json(user);
       });
-    });
+    }
+  );
 }
 
 // 7. DELETE USER
 function deleteUser(req, res) {
-  return UserModel.findOneAndRemove({ emali: req.params.email }, function (err, user) {
+  return UserModel.findOneAndRemove({ email: req.params.email }, (err, user) => {
     if (err) {
       return errHandler(err);
     }
@@ -120,4 +126,4 @@ module.exports = {
   findUser: viewAllUsers,
   updateUser: updateUser,
   deleteUser: deleteUser
-}
+};

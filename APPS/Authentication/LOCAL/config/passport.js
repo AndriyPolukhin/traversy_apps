@@ -18,7 +18,7 @@ const
 /**
  * CONFIGURATION AND SETTINGS
  */
-passport.serializeUser(function (user, doen) {
+passport.serializeUser(function (user, done) {
   done(null, user.id);
 });
 passport.deserializeUser(function (id, done) {
@@ -35,7 +35,7 @@ passport.deserializeUser(function (id, done) {
  * STRATEGIES
  */
 //===================LOCAL STRATEGY==========================
-passport.user('local-signup', new LocalStrategy({
+passport.use('local-signup', new LocalStrategy({
   usernameField: 'email',
   passwordField: 'password',
   passReqToCallback: true
@@ -48,7 +48,7 @@ passport.user('local-signup', new LocalStrategy({
         }
         if (user) {
           console.log('user already exist');
-          reutrn done(null, false, { errMsg: 'email alraedy exist' });
+          return done(null, false, { errMsg: 'email already exist' });
         }
         else {
           let newUser = new User();
@@ -96,7 +96,6 @@ passport.use('local-login', new LocalStrategy({
       }
       return done(null, user);
     });
-
   }));
   /**
    * EXPORT MODULE

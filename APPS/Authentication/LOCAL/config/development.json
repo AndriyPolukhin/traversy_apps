@@ -1,10 +1,5 @@
-/*
-* DEVELOPENT ENV SETTINGS
-*
-*/
-
 {
-    "host":"localhost",
+    "host": "localhost",
     "devURL": "http://localhost:3030",
     "env": "development",
     "dbURL": "mongodb://localhost/xpressLocalAuth",

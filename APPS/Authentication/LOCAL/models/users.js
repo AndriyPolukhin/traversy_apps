@@ -3,7 +3,7 @@
  */
 const
   mongoose = require('mongoose'),
-  bcrypt = requrie('bcrypt-nodejs');
+  bcrypt = require('bcrypt-nodejs');
 //===========================================================
 /**
  * MODULE VARIABLES

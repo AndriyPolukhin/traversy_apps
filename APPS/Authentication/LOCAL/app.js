@@ -13,7 +13,7 @@ const
 /**
  * CREATE APP INSTANCE
  */
-const app = express();
+let app = express();
 //===========================================================
 /**
  * MODULE VARIABLES
@@ -23,8 +23,8 @@ const
   port = process.env.PORT || 3030,
   env = config.env,
   router = require('./routes/routes'),
-  dbURL = config.dbURL,
-  app.locals.errMsg = app.locals.errMsg || null;
+  dbURL = config.dbURL;
+app.locals.errMsg = app.locals.errMsg || null;
 //===========================================================
 /**
  * MODULE SETTINGS AND CONFIG
@@ -50,12 +50,13 @@ db.once('disconnected', () => {
 /**
  * MIDDLEWARE
  */
+// 1. Log in all the requests made to the server
 app.use(logger('dev'));
-
+// 2. Parsing any json contient in the request body
 app.use(bParser.json());
-
+// 3. Parsing any 'POST' data in the request body
 app.use(bParser.urlencoded({ extended: true }));
-
+// 4. Pass the processed 'request' object to the session
 app.use(session({
   name: 'xpressBlu.sess',
   store: new mongodbStore({

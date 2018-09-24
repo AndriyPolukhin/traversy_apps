@@ -13,7 +13,7 @@
 ## 3. DATA STRUCTURE TO REPRESENT THE ENTITIES (MODEL / SCHEMA / MONGOOSE)
 ## 4. DATABASE FOR PERSISTANT AUTHENTICATION (MongoDB)
 ## 5. SESSION MANAGEMENT ( cookie based / session store based / EXPRESS-SESSION)
-## 6. USE PASSPORTjs nad BCRYPTjs to create a LocalStrategy for authentication
+## 6. USE PASSPORTjs and BCRYPTjs to create a LocalStrategy for authentication
 
 
 ## TOOLING:

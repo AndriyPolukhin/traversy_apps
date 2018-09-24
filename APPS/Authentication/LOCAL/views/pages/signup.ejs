@@ -1,0 +1,33 @@
+<!-- from '/views/pages/signup.ejs'-->
+<!DOCTYPE html>
+
+<head>
+  <% include ../partials/head %>
+</head>
+
+<body>
+  <main class="container">
+    <header>
+      <% include ../partials/header %>
+    </header>
+    <div class="jumbotron">
+      <h1><span class="fas fa-sign-in"></span> Signup</h1>
+      <% if(errMsg) { %>
+      <p class="errMsg">
+        <%=errMsg%>
+      </p>
+      <% } %>
+      <form action="/signup" method="POST" class="form-inline">
+        <div class="form-group">
+          <input type="text" name="username" class="form-control" placeholder="username">
+          <input type="email" name="email" class="form-control" placeholder="email">
+          <input type="password" name="password" class="form-control" placeholder="password">
+          <input type="submit" class="btn btn-success btn-default">
+        </div>
+      </form>
+    </div>
+    <footer class="text-center">
+      <% include ../partials/footer %>
+    </footer>
+  </main>
+</body>

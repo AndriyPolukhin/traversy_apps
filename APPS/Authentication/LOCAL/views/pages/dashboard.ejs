@@ -1,0 +1,26 @@
+<!-- from '/views/pages/dashboard.ejs-->
+<!Doctype html>
+
+<head>
+  <% include ../partials/head %>
+</head>
+
+<body>
+  <main class="container">
+    <header>
+      <% include ../partials/header %>
+    </header>
+    <div class="jumbotron">
+      <h1><span class="fas fa-user"> Welcome</span></h1>
+      <p>Your username is:
+        <%=username%>
+      </p>
+      <p>Your email is:
+        <%=email%>
+      </p>
+    </div>
+    <footer class="text-center">
+      <% include ../partials/footer %>
+    </footer>
+  </main>
+</body>
