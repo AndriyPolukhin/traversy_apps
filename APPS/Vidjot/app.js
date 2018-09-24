@@ -6,7 +6,7 @@
 // 1. DEPENDENCIES
 // 1.1. Main Express
 const express = require('express');
-const port = 5000;
+const port = process.env.PORT || 5000;
 const path = require('path');
 // 1.2 Engine and method override
 const exphbs = require('express-handlebars');
@@ -24,13 +24,14 @@ const app = express();
 // 2.2 Load routes
 const ideas = require('./routes/ideas');
 const users = require('./routes/users');
-// 2.3 Load the passport configs
+// 2.3 Load the passport/database configs
 require('./config/passport')(passport);
+const db = require('./config/database');
 
 // Map global promise - get rid of warning
 mongoose.Promise = global.Promise;
 // 3. Connect to mongoose
-mongoose.connect('mongodb://localhost/vidjot-dev', {
+mongoose.connect(db.mongoURI, {
   // useNewUrlParser: true,
   useMongoClient: true
 })

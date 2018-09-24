@@ -95,5 +95,14 @@ router.post('/register', (req, res) => {
   }
 });
 
-// 3. EXPORTS
+// 3.4 LOGOUT USER
+router.get('/logout', (req, res) => {
+  req.logout();
+  req.flash('success_msg', 'You are logged out');
+  res.redirect('/users/login');
+});
+
+
+
+// 4. EXPORTS
 module.exports = router;
