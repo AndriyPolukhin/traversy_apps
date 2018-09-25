@@ -10,7 +10,10 @@
     </form>
     <ul>
       <li v-for="user in users">
-        {{user.name}}: {{user.email}}
+        <input type="checkbox" class="toggle" v-model="user.contacted">
+        <span :class="{contacted: user.contacted}">
+        {{user.name}}: {{user.email}} <button v-on:click="deleteUser(user)">x</button>
+        </span>
       </li>
     </ul>
   </div>
@@ -22,23 +25,7 @@ export default {
   data () {
     return {
       newUser: {},
-      users: [
-        {
-          name: 'Andriy Polukhin',
-          email: 'andriy@gmail.com',
-          contacted: false
-        },
-        {
-          name: 'Owen Party',
-          email: 'owens@gmail.com',
-          contacted: false
-        },
-        {
-          name: 'Roger That',
-          email: 'roger@gmail.com',
-          contacted: true
-        }
-      ]
+      users: []
     }
   },
   methods: {
@@ -49,12 +36,24 @@ export default {
         email: this.newUser.email,
         contacted: false
       });
+    },
+    deleteUser: function(user) {
+      this.users.splice(this.users.indexOf(user), 1);
     }
+  },
+  created: function() {
+    this.$http.get('https://jsonplaceholder.typicode.com/users')
+      .then(function(response) {
+        this.users = response.data;
+      });
   }
 }
 </script>
 
 <style scoped>
+.contacted {
+  text-decoration: line-through;
+}
 </style>
 
 
