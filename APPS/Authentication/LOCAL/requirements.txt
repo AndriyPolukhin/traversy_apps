@@ -31,3 +31,17 @@
 # 2.‘should’ (BDD assertion library for express)
 # 3. ‘supertest’ (powerful assertion library for testing RESTful endpoints)
 # 4. ‘mocha’ (test runner).
+
+
+## The test will cover the following areas in no particular order:
+
+# 1. can an unauthenticated user access the protected ‘/dashboard’ route?
+# 2. what happens if a user tries to signup without filling all the fields?
+# 3. what happens if a user ties to use an existing email address?
+# 4. what happens if a user meets all the conditions to sign up successfully?
+# 5. what happens if a non existent user tries to login?
+# 6. what happens if an existing user supplies an invalid username?
+# 7. what happens if an existing user supplies an invalid password?
+# 8. what happens if an existing supplies valid credentials?
+# 9. what happens if a logged in user tries to logout?
+

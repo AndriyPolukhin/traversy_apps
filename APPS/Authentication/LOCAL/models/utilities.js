@@ -27,7 +27,7 @@ function validationErr(err, res) {
 function cr8NewUser(req, res) {
   return UserModel.create({
     email: req.body.email,
-    password: req.body.passowrd,
+    password: req.body.password,
   }, (err, user) => {
     if (err) {
       console.error('There was an error creating the user');
@@ -52,8 +52,7 @@ function cr8NewUser(req, res) {
 
 // 4. FIND USER
 function findUser(req, res) {
-  return UserModel.findOne(
-    { email: req.params.email }, 'email',
+  return UserModel.findOne({ email: req.params.email }, 'email',
     (err, user) => {
       if (err) {
         return errHandler(err);
@@ -71,22 +70,19 @@ function findUser(req, res) {
 
 // 5. VIEW ALL USERS
 function viewAllUsers(req, res) {
-  return UserModel.find(
-    {},
+  return UserModel.find({},
     (err, users) => {
       if (err) {
         return errHandler(err);
       }
       console.log(users);
       return res.json(users);
-    }
-  );
+    });
 }
 
 // 6. UPDATE USER
 function updateUser(req, res) {
-  return UserModel.findOne(
-    { email: req.params.email },
+  return UserModel.findOne({ email: req.params.email },
     (err, user) => {
       if (err) {
         return errHandler(err);
@@ -101,19 +97,19 @@ function updateUser(req, res) {
         console.log('User updated: ', user);
         return res.json(user);
       });
-    }
-  );
+    });
 }
 
 // 7. DELETE USER
 function deleteUser(req, res) {
-  return UserModel.findOneAndRemove({ email: req.params.email }, (err, user) => {
-    if (err) {
-      return errHandler(err);
-    }
-    console.log('User deleted ', user);
-    return res.json(user);
-  });
+  return UserModel.findOneAndRemove({ email: req.params.email },
+    (err, user) => {
+      if (err) {
+        return errHandler(err);
+      }
+      console.log('User deleted ', user);
+      return res.json(user);
+    });
 }
 //===========================================================
 /**
@@ -123,7 +119,9 @@ module.exports = {
   errHandler: errHandler,
   validationErr: validationErr,
   cr8NewUser: cr8NewUser,
-  findUser: viewAllUsers,
+  findUser: findUser,
+  viewAllUsers: viewAllUsers,
   updateUser: updateUser,
   deleteUser: deleteUser
 };
+//===========================================================

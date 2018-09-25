@@ -1,0 +1,7 @@
+## VUE-CLI TOOLS
+# npm install -g vue-CLI
+# vue init webpack myapp // new project creation
+# cd myapp
+# npm install // install dependencies
+# npm run dev // Run dev server
+# npm run build // Build application to production

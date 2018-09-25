@@ -21,6 +21,7 @@ const
 passport.serializeUser(function (user, done) {
   done(null, user.id);
 });
+
 passport.deserializeUser(function (id, done) {
   User.findById(id, function (err, user) {
     if (err) {
@@ -47,8 +48,8 @@ passport.use('local-signup', new LocalStrategy({
           return errHandler(err);
         }
         if (user) {
-          console.log('user already exist');
-          return done(null, false, { errMsg: 'email already exist' });
+          console.log('user already exists');
+          return done(null, false, { errMsg: 'email already exists' });
         }
         else {
           let newUser = new User();
@@ -64,7 +65,7 @@ passport.use('local-signup', new LocalStrategy({
               }
               return errHandler(err);
             }
-            console.log('New user successfully created ...', newUser.username);
+            console.log('New user successfully created...', newUser.username);
             console.log('email', email);
             console.log(newUser);
             return done(null, newUser);
@@ -97,6 +98,7 @@ passport.use('local-login', new LocalStrategy({
       return done(null, user);
     });
   }));
-  /**
-   * EXPORT MODULE
-   */
+/**
+ * EXPORT MODULE
+ */
+module.exports = passport;

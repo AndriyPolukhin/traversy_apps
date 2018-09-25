@@ -1,28 +1,28 @@
 /**
-* MODULE DEPENDENCIES
+*Module dependencies
 */
-const
+var
   app = require('./app'),
   http = require('http');
 //==============================================================================
 /**
-* CREATE SERVER VARIABLES
+*Create server instance
 */
-const server = http.createServer(app);
+var server = http.createServer(app);
 //==============================================================================
 /**
-* MODULE VARIABLES
+*Module Variables
 */
 //==============================================================================
-const
+var
   port = app.get('port'),
   env = app.get('env');
 /**
-* BIND SERVER TO PORT
+*Bind server to port
 */
 //==============================================================================
 server.listen(port, function () {
-  return console.log('Xpress server listening on port:' + port + ' in ' + env +
-    ' mode');
+  return console.log('Xpress server listening on port:' + port +' in ' + env +
+  ' mode');
 });
 //==============================================================================

@@ -3,10 +3,8 @@
  */
 const
   express = require('express'),
-  // passport = require('../config/passport'),
-  passport = require('passport'),
+  passport = require('../config/passport'),
   utilities = require('../models/utilities');
-require('../config/passport');
 //===========================================================
 /**
  * CREATE ROUTER INSTANCE
@@ -29,7 +27,7 @@ const
   validationErr = utilities.validationErr,
   cr8NewUser = utilities.cr8NewUser,
   findUser = utilities.findUser,
-  viewAllUsers = utilities.viewAllusers,
+  viewAllUsers = utilities.viewAllUsers,
   updateUser = utilities.updateUser,
   deleteUser = utilities.deleteUser;
 //===========================================================
@@ -51,8 +49,7 @@ router.get('/', (req, res) => {
   return res.render('pages/index');
 });
 
-router
-  .route('/login')
+router.route('/login')
   .get((req, res) => {
     return res.render('pages/login');
   })
@@ -62,12 +59,11 @@ router
         return next(err); // will generate a 500 error
       }
       if (!user) {
-        return res.status(409)
-          .render('pages/login', { errMsg: info.errMsg });
+        return res.status(409).render('pages/login', { errMsg: info.errMsg });
       }
       req.login(user, (err) => {
         if (err) {
-          console.log(err);
+          console.error(err);
           return next(err);
         }
         return res.redirect('/dashboard');
@@ -75,8 +71,7 @@ router
     })(req, res, next);
   });
 
-router
-  .route('/sugnup')
+router.route('/sugnup')
   .get((req, res) => {
     return res.render('pages/signup');
   })
@@ -125,13 +120,14 @@ router
     return update(req, res);
   })
   .delete((req, res) => {
-    return delete (req, res);
+    return deleteUser(req, res);
   });
 //===========================================================
 /**
  * EXPORT MODULE
  */
 module.exports = router;
+//===========================================================
 
 
 
