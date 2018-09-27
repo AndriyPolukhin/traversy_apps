@@ -1,0 +1,9 @@
+### ARTICLE LINK: https://medium.com/@nohkachi/my-vue-on-mvvm-c3ffb4f0678f
+
+##  the MVVM architecture is built around 3 elements:
+
+# 1.Models: Simple constructs which hold data used by the VM and the app. Models have no logic apart from data validation logic and they don’t access services to retrieve or save data. In Vue.js, Models are POJOs.
+
+# 2.Views: These render the data contained within the VM. Views are active and are their basic structure is defined by ‘templates’ which are either custom script tags, custom DOM tags or plain HTML. In order to format the data provided by the VM and to respond to user actions, View templates are enhanced with data-bindings and directives. These two combine to ensure that the View is always in sync with the state of the VM and remove the need for any direct DOM manipulations.
+
+# 3.VMs: These hold all the Business Logic required to manipulate the data used by the app, they also have properties which are bound to various DOM elements in their View templates to allow for data-binding, furthermore VMs have ‘methods’ which handle DOM events intercepted by directives embedded within the View template.
