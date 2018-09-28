@@ -1,0 +1,16 @@
+{
+  "host": "",
+  "liveURL": "",
+  "env": "production",
+  "sessionSecret": "",
+  "fb": {
+    "appID": "",
+    "appSecret": "",
+    "callbackURL": ""
+  },
+  "twitter": {
+    "consumerKey": "",
+    "consumerSecret": "",
+    "callbackURL": ""
+  }
+}

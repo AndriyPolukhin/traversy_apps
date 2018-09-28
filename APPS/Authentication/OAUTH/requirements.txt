@@ -1,0 +1,36 @@
+## TECH STACK
+## We will use the following tech stack in building this app:
+
+# 1. Frontend: Vue.js (including vue-resource) , Bootstrap
+# 2. Backend: Node.js, Express.js, MongoDB/Mongoose.js, Passport.js (including passport-local, passport-facebook and passport-twitter)
+# 3. Feature modules: twit, facebook-node-sdk
+# 4. Tooling: npm (task runner), browserify (including the ‘partialify’ transform)
+# 5. Testing: mocha, should, supertest
+
+## APP FUNCTIONALITY
+
+# We want our app to perform the following functions for the user:
+
+# 1. An unauthenticated user can’t access the ‘protected’ part of the app i.e. the ‘dashboard/profile’ area. Any attempt by an unauthenticated user to access this portion should trigger a redirect to ‘/login’.
+# 2. A user has 3 options for login/signup — local, facebook or twitter.
+# 3. A loggedin user (via any of the previous 3 options) can choose to link any of the other accounts to his/her profile in order to access desired features.
+# 4. To protect the user against multiple linking attempts, any account which has been successfully linked to the user’s profile is removed from the list of available accounts to be linked. When all 3 accounts have been linked, the message inviting the user to link accounts is no longer displayed.
+# 5. To prevent unnecessary server calls, a logged in user who hasn’t linked other accounts will be able to access the profile pages for the accounts but no info or features for that profile will be displayed.
+# 6. If the user logs out, the session is destroyed and the user is redirected to the ‘home’ page.
+# 7. The photo displayed on the user’s profile will be the first one available from either Twitter or Facebook (defaults to Twitter).
+
+
+## Backend overview
+
+# 1. Base App: bootstraps the app and involves sever.js and app.js
+# 2. App configuration: app-wide configuration and API key value.
+# 3. Data Models: access to the dBase and CRUD operations
+# 4. Routes: This App will use 3 route groups — a) the base routes which handle access to the landing page, local authentication and access to the protected portion of the app (i.e. ‘user dashboard/profile’) b) the facebook route which allows a logged in user with a facebook account to retrieve recent posts made by the user on facebook and c) the twitter route which provides the same functionality for the user as the facebook route.
+# 5. Views: render the interface of the app to the user.
+
+## Congfig directory: config.js, development.js and production.js, passport.js
+
+## a) build the base app, create a test route and test that all works
+## b) build the data model before the app
+
+### BASE APP:
