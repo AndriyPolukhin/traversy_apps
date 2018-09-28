@@ -1,0 +1,61 @@
+<html>
+
+<head>
+  <title>Learn D3 in 5 minutes</title>
+</head>
+
+<body>
+
+  <button id="btn">Click me</button>
+  <!--
+  <h3>Great day to be obsessed</h3>
+  <ul></ul>
+
+  <svg width='200' height='500'></svg>
+-->
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script>
+    d3.select('h3').style('color', 'darkblue');
+    d3.select('h3').style('font-size', '24px');
+
+    const fruits = ['apples', 'bananas', 'mango', 'orange'];
+    d3.select('ul')
+      .selectAll('li')
+      .data(fruits)
+      .enter()
+      .append('li')
+      .text((d) => { return d });
+
+    /*
+        const svg = d3.select('svg');
+        svg.append('rect')
+          .attr('x', 50)
+          .attr('y', 50)
+          .attr('width', 200)
+          .attr('height', 100)
+          .attr('fill', 'green');
+      */
+
+    const data = [80, 120, 60, 150, 200];
+    const barHeight = 20;
+    const bar = d3.select('svg')
+      .selectAll('rect')
+      .data(data)
+      .enter()
+      .append('rect')
+      .attr('width', (d) => { return d; })
+      .attr('height', barHeight - 1)
+      .attr('transform', (d, i) => {
+        return "translate(0," + i * barHeight + ")";
+      });
+
+    d3.select('#btn')
+      .on('click', () => {
+        d3.select('body')
+          .append('h3')
+          .text('Hello Ninja-Batman Engineer');
+      });
+  </script>
+</body>
+
+</html>
