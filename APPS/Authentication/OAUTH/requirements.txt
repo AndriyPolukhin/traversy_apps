@@ -1,3 +1,5 @@
+### https://medium.com/@nohkachi/express-4-x-oauth-and-local-authentication-with-passport-js-pt-1-9165ad509a53
+
 ## TECH STACK
 ## We will use the following tech stack in building this app:
 
