@@ -1,11 +1,7 @@
-/**
- * MAIN FILE FOR THE APP
- */
 'use strict';
 /**
  * MODULE DEPENDENCIES
  */
-
 const
   path = require('path'),
   bParser = require('body-parser'),

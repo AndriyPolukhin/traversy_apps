@@ -1,6 +1,3 @@
-/**
- * MAIN FILE FOR THE SERVER
- */
 'use strict';
 /**
  * MODULE DEPENDENCIES
