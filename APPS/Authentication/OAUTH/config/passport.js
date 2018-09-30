@@ -1,10 +1,10 @@
-'user strict';
+'use strict';
 /**
  * MODULE DEPENDENCIES
  */
 const
   passport = require('passport'),
-  config = require('./config'),
+  config = require('./confgi'),
   User = require('../models/users');
 //=======================================================
 /**
@@ -28,10 +28,11 @@ const
 passport.serializeUser(function (user, done) {
   done(null, user.id);
 });
+
 passport.deserializeUser(function (id, done) {
   User.findById(id, function (err, user) {
     if (err) {
-      console.error('There was an error accessing the record of user with id: ' + id);
+      console.error('There was an error accessing the records of user with id: ' + id);
       return done(err);
     }
     return done(null, user);
@@ -59,7 +60,7 @@ passport.use('local-signup', new LocalStrategy({
             return done(null, false, { errMsg: 'email already exists' });
           }
           else {
-            var newUser = new User();
+            let newUser = new User();
             newUser.local.username = req.body.username;
             newUser.local.email = email;
             newUser.local.password = newUser.generateHash(password);
@@ -77,7 +78,7 @@ passport.use('local-signup', new LocalStrategy({
         });
       }
       else {//user exists and is loggedin
-        var user = req.user; // pull the user out of the session
+        let user = req.user; // pull the user out of the session
         // update the current users local credentials
         user.local.username = req.body.username;
         user.local.email = email;
@@ -105,20 +106,141 @@ passport.use('local-login', new LocalStrategy({
         return done(err);
       }
       if (!user) {
-        return done(null, false, {
-          errMsg: 'User does not exist, please' +
-            ' <a href="/signup">signup</a>'
-        });
+        return done(null, false, { errMsg: 'User does not exist, please <a href="/signup">signup</a>' });
       }
-      if (!user.validPassword(password)) {
+      if (!user.validPassword(passowrd)) {
         return done(null, false, { errMsg: 'Invalid password try again' });
       }
       return done(null, user);
     });
+  }
+));
+//=================FACEBOOK STRATEGY=========================
+passport.use(new FBStrategy({
+  clientID: fbAppId,
+  clientSecret: fbAppSecret,
+  callbackURL: fbCallbackURL,
+  profileFields: ['id', 'displayName', 'emails', 'photos'],
+  passReqToCallback: true
+},
+  function (req, accessToken, refreshToken, profile, done) {
+    process.nextTick(function () {
+      if (!req.user) {//confirm that user not loggedin
+        User.findOne({ 'social.fb.id': profile.id }, function (err, user) {
+          if (err) {
+            console.error('There was an error accessing the dbase', err.message);
+            return done(err);
+          }
+          if (user) {
+            return done(null, user);
+          }
+          else {
+            var newUser = new User();
+            newUser.social.fb.id = profile.id;
+            newUser.social.fb.token = accessToken;
+            newUser.social.fb.displayName = profile.displayName;
+            newUser.social.fb.email = profile.emails[0].value;
+            newUser.social.fb.photo = profile.photos[0].value || '';
+            newUser.save(function (err) {
+              if (err) {
+                console.error(err);
+                return done(err);
+              }
+              return done(null, newUser);
+            });
+          }
+        }
+        );
+      }
+      else {//user exists and is loggedin
+        var user = req.user; // pull the user out of the session
+        // update the current users facebook credentials
+        user.social.fb.id = profile.id;
+        user.social.fb.token = accessToken;
+        user.social.fb.displayName = profile.displayName;
+        user.social.fb.email = profile.emails[0].value;
+        user.social.fb.photo = profile.photos[0].value || '';
+        // save modifications to user
+        user.save(function (err) {
+          if (err) {
+            console.error(err);
+            return done(err);
+          }
+          //console.log('user fb', user.social.fb.displayName);
+          //console.log('user fb tokens',user.social.fb.token);
+          return done(null, user);
+        });
+      }
+    });
+  }));
+//=================TWITTER STRATEGY=========================
+passport.use(new TwitterStrategy({
+  consumerKey: consumerKey,
+  consumerSecret: consumerSecret,
+  callbackURL: twitterCallbackURL,
+  profileFields: ['id', 'displayName', 'username', 'photos', '_json'],
+  passReqToCallback: true
+},
+  function (req, accessToken, tokenSecret, profile, done) {
+    process.nextTick(function () {
+      if (!req.user) {//confirm that user not loggedin
+        User.findOne({ 'social.twitter.id': profile.id }, function (err, user) {
+          if (err) {
+            console.error('There was an error accessing the dbase', err.message);
+            return done(err);
+          }
+          if (user) {
+            return done(null, user);
+          }
+          else {
+            var newUser = new User();
+            newUser.social.twitter.id = profile.id;
+            newUser.social.twitter.token = accessToken;
+            newUser.social.twitter.displayName = profile.displayName;
+            newUser.social.twitter.handle = profile.username;
+            newUser.social.twitter.photo = profile.photos[0].value || '';
+            newUser.social.twitter.metaData.location = profile._json.location;
+            newUser.social.twitter.metaData.description = profile._json.description;
+            newUser.save(function (err) {
+              if (err) {
+                console.error(err);
+                return done(err);
+              }
+              return done(null, newUser);
+            });
+          }
+        }
+        )
+      }
+      else {
+        //user exists and is loggedin
+        var user = req.user; // pull the user out of the session
+        // update the current users facebook credentials
+        user.social.twitter.id = profile.id;
+        user.social.twitter.token = accessToken;
+        user.social.twitter.displayName = profile.displayName;
+        user.social.twitter.handle = profile.username;
+        user.social.twitter.photo = profile.photos[0].value || '';
+        user.social.twitter.metaData.location = profile._json.location;
+        user.social.twitter.metaData.description = profile._json.description;
+        // save modifications to user
+        user.save(function (err) {
+          if (err) {
+            console.error(err);
+            return done(err);
+          }
+          return done(null, user);
+        });
+      }
+    });
   })
 );
-//=================FACEBOOK STRATEGY=========================
-
+//=======================================================
+/**
+ * EXPORT MODULE
+ */
+module.exports = passport;
+//=======================================================
 
 
 
