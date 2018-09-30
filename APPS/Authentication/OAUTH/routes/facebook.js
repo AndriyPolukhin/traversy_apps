@@ -3,7 +3,7 @@
  * MODULE DEPENDENCIES
  */
 const
-  express = requrie('express'),
+  express = require('express'),
   Facebook = require('facebook-node-sdk'),
   config = require('../config/config');
 //=======================================================

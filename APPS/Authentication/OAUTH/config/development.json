@@ -5,15 +5,15 @@
   "dbURL": "mongodb://localhost/simpleLib",
   "sessionSecret": "qwertyuiop123456789",
   "fb": {
-    "appID": "",
-    "appSecret": "",
+    "appID": "someid",
+    "appSecret": "somesecret",
     "callbackURL": "http://127.0.1:3030/auth/facebook/callback"
   },
   "twitter": {
-    "consumerKey": "",
-    "consumerSecret": "",
-    "accessTokenKey": "",
-    "accessTokenSecret": "",
+    "consumerKey": "somekey",
+    "consumerSecret": "somesecret",
+    "accessTokenKey": "sometoken",
+    "accessTokenSecret": "sometokensecret",
     "callbackURL": "http://127.0.0.1:3030/auth/twitter/callback"
   }
 }

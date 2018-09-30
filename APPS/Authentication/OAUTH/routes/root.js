@@ -20,12 +20,12 @@ const
   findUser = UserUtils.findUser,
   viewAllUsers = UserUtils.viewAllUsers,
   updateUser = UserUtils.updateUser,
-  deleteUser  UserUtils.deleteUser;
+  deleteUser = UserUtils.deleteUser;
 //=======================================================
 /**
  * MODDLEWARE
  */
-router.use(passport.inititalize());
+router.use(passport.initialize());
 router.use(passport.session());
 //=======================================================
 /**
@@ -146,7 +146,7 @@ router.get('/dashboard', isLoggedIn, function (req, res, next) {
   });
 });
 
-router.logout('/logout', function (req, res) {
+router.get('/logout', function (req, res) {
   req.logout();
   req.session.destroy();
   return res.redirect('/');

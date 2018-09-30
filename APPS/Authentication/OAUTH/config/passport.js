@@ -4,7 +4,7 @@
  */
 const
   passport = require('passport'),
-  config = require('./confgi'),
+  config = require('./config'),
   User = require('../models/users');
 //=======================================================
 /**

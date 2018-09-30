@@ -4,7 +4,7 @@
  */
 const
   express = require('express'),
-  Twit = requrie('twit'),
+  Twit = require('twit'),
   config = require('../config/config');
 //=======================================================
 /**
@@ -15,7 +15,7 @@ const router = express.Router();
 /**
  * MODULE VARIABLES
  */
-const
+let
   consumer_key = config.twitter.consumerKey,
   consumer_secret = config.twitter.consumerSecret,
   access_token_key = config.twitter.accessTokenKey,

@@ -2,7 +2,7 @@
 /**
  * MODULE DEPENDENCIES
  */
-const UserModel = require('/.users');
+const UserModel = require('./users');
 //=======================================================
 /**
  * USER MODEL UTILITY FUNCTIONS

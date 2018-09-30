@@ -21,7 +21,7 @@ const app = express();
 /**
  * MODULE VARIABLES
  */
-const
+let
   port = process.env.PORT || 3030,
   env = config.env,
   dbURL = config.dbURL,
@@ -66,7 +66,7 @@ process.on('SIGINT', () => {
   });
 });
 sessStore = new mongoStore({
-  mongoseConnection: mongoose.connection,
+  mongooseConnection: mongoose.connection,
   touchAfter: 24 * 3600
 });
 //=======================================================
