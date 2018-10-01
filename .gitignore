@@ -37,7 +37,9 @@ node_modules/
 jspm_packages/
 domcrashcourse_1/
 domcrashcourse_2/
-
+vendor/
+bower_components
+emojis
 
 # Typescript v1 declaration files
 typings/

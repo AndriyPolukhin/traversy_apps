@@ -1,0 +1,22 @@
+## Database
+# storybooks_dev
+# Roger || Roger_101
+
+## HEROKU
+# 1. heroku login / provide your email and password
+# 2. git init / in the folder init the repository
+# 3. git add . / add everything
+# 4. git commit -am "initial commit"
+# 5. heroku create
+# 6. set git remote to : heroku git:remote -a blooming-hollows-98664
+# 7. git push heroku master / after it is build
+# 8. heroku open
+
+## GOOGLE AUTH20
+# 1. https://console.cloud.google.com
+# 2. Google + API
+# 3. Create new project
+# 4. Create credentials
+# 5. get ClientID
+# 6. get ClientSecret
+# 7. Set the host and callback host/path
