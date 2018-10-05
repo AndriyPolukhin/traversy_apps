@@ -1,5 +1,6 @@
 
 const express = require('express');
+const exphbs = require('express-handlebars');
 const mongoose = require('mongoose');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
@@ -13,6 +14,7 @@ require('./config/passport')(passport);
 
 // Load Routes
 const auth = require('./routes/auth');
+const index = require('./routes/index');
 // Load Keys
 const keys = require('./config/keys');
 // Map global promises
@@ -27,13 +29,15 @@ mongoose.connect(keys.mongoURI, {
 
 const app = express();
 
+// Handlebars Middleware
+app.engine('handlebars', exphbs({
+  defaultLayout: 'main'
+}));
+app.set('view engine', 'handlebars');
 
 /**
  * ROUTES
  */
-app.get('/', (req, res) => {
-  res.send('It works');
-});
 
 app.use(cookieParser());
 app.use(session({
@@ -53,6 +57,7 @@ app.use((req, res, next) => {
 });
 
 app.use('/auth', auth);
+app.use('/', index);
 
 
 
