@@ -1,0 +1,5 @@
+# Referrences:
+# 1. User Components
+# 2. Form Validations
+# 3. Post Component ( using json placeholder )
+# 4. Router
