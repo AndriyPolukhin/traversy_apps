@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../../models/User';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-users',
@@ -12,6 +13,8 @@ export class UsersComponent implements OnInit {
   showExtended: boolean = true;
   loaded: boolean = false;
   enableAdd: boolean = true;
+  faPlus = faPlus;
+
 
 
   constructor() { }
@@ -30,7 +33,8 @@ export class UsersComponent implements OnInit {
           state: 'DE'
         },
         isActive: true,
-        registered: new Date('01/02/2018 08:30:00')
+        registered: new Date('01/02/2018 08:30:00'),
+        hide: true
       },
       {
         firstName: 'Anastasia',
@@ -41,8 +45,9 @@ export class UsersComponent implements OnInit {
           city: 'Hamburg',
           state: 'DE'
         },
-        isActive: false,
-        registered: new Date('03/11/2017 05:15:00')
+        isActive: true,
+        registered: new Date('03/11/2017 05:15:00'),
+        hide: true
       },
       {
         firstName: 'Valentina',
@@ -53,8 +58,9 @@ export class UsersComponent implements OnInit {
           city: 'Kiev',
           state: 'UA'
         },
-        isActive: true,
-        registered: new Date('20/08/2008 18:30:00')
+        isActive: false,
+        registered: new Date('20/08/2008 18:30:00'),
+        hide: true
       }
     ];
 
@@ -65,4 +71,8 @@ export class UsersComponent implements OnInit {
   addUser(user: User) {
     this.users.push(user);
   }
+
+  // toggleHide(user: User) {
+  //   user.hide = !user.hide;
+  // }
 }
