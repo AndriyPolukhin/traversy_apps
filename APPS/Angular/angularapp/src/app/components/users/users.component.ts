@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { User } from '../../models/User';
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'app-users',
@@ -8,30 +8,29 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
-  // Property
+  // Properties
+  user: User = {
+    // Default User Data
+    firstName: '',
+    lastName: '',
+    email: ''
+  };
   users: User[];
   showExtended: boolean = true;
   loaded: boolean = false;
-  enableAdd: boolean = true;
-  faPlus = faPlus;
-
-
+  enableAdd: boolean = false;
+  showUserForm: boolean = false;
+  @ViewChild('userForm') form: any;
 
   constructor() { }
 
   ngOnInit() {
-
-
+    // USER DATA
     this.users = [
       {
         firstName: 'Andriy',
         lastName: 'Polukhin',
-        age: 33,
-        address: {
-          street: 'Rosengaten',
-          city: 'Hamburg',
-          state: 'DE'
-        },
+        email: 'andriy@gmail.com',
         isActive: true,
         registered: new Date('01/02/2018 08:30:00'),
         hide: true
@@ -39,12 +38,7 @@ export class UsersComponent implements OnInit {
       {
         firstName: 'Anastasia',
         lastName: 'Tsukrova',
-        age: 29,
-        address: {
-          street: 'Rosengaten',
-          city: 'Hamburg',
-          state: 'DE'
-        },
+        email: 'anastasia@gmail.com',
         isActive: true,
         registered: new Date('03/11/2017 05:15:00'),
         hide: true
@@ -52,12 +46,7 @@ export class UsersComponent implements OnInit {
       {
         firstName: 'Valentina',
         lastName: 'Yavorskaya',
-        age: 35,
-        address: {
-          street: 'Avtozavodskaya',
-          city: 'Kiev',
-          state: 'UA'
-        },
+        email: 'valya@gmail.com',
         isActive: false,
         registered: new Date('20/08/2008 18:30:00'),
         hide: true
@@ -68,11 +57,19 @@ export class UsersComponent implements OnInit {
 
   }
 
-  addUser(user: User) {
-    this.users.push(user);
+  // METHODS
+  onSubmit({ value, valid }: { value: User, valid: boolean }) {
+    if (!valid) {
+      console.log('Form is not valid');
+    } else {
+      value.isActive = true;
+      value.registered = new Date();
+      value.hide = true;
+
+      this.users.unshift(value);
+
+      this.form.reset();
+    }
   }
 
-  // toggleHide(user: User) {
-  //   user.hide = !user.hide;
-  // }
 }
