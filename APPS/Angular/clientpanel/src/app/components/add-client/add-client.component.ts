@@ -23,7 +23,7 @@ export class AddClientComponent implements OnInit {
   };
 
   disableBalanceOnAdd: boolean = true;
-  @ViewChild('clentForm') form: any;
+  @ViewChild('clientForm') form: any;
 
   constructor(
     private flashMessage: FlashMessagesService,
