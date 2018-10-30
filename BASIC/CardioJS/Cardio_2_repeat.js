@@ -1,15 +1,9 @@
-// Challenge 1: longest Word
+// Challenge I: Longest Word
 // Return the longest word of a string
+// If more than one longest word , put into an array
+// ex. longestWord('hello, my name is Andriy') === 'hello'
+// ex. logestWord('Hello there, my name is Andriy') === ['hello', 'there']
 
 function longestWord(sen) {
-
-  const Arr = sen.toLowerCase().match(/[a-z0-9]+/g);
-  const sortArr = Arr.sort((a, b) => b.length - a.length);
-  const longArr = sortArr.filter((w) => w.length === sortArr[0].length);
-  return longArr.length === 1 ? longArr[0] : longArr;
-
+  return "Let's Start";
 }
-
-console.log(
-  longestWord('Hello there, mu name is Andriy')
-);
