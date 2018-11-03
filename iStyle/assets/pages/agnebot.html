@@ -6,7 +6,10 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--Import materialize.css-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-  <link rel="stylesheet" href="css/main.css">
+  <!-- IMPORTING FONTS -->
+  <link href="https://fonts.googleapis.com/css?family=Handlee|Roboto+Slab:300" rel="stylesheet">
+  <!-- MAIN STYLES-->
+  <link rel="stylesheet" href="../css/style.css">
   <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
     crossorigin="anonymous"></script>
   <!--Let browser know website is optimized for mobile-->
@@ -14,12 +17,19 @@
   <title>iStyle</title>
 </head>
 
-<body id="home" class="scrollspy">
+<body>
   <!-- Navbar -->
   <div class="navbar-fixed">
+
     <nav class="blue-grey darken-4">
+
       <div class="container">
         <div class="nav-wrapper">
+          <div class="right hide-on-med-and-down">
+            <a href="/">de</a>
+            <a href="/">en</a>
+            <a href="/">ru</a>
+          </div>
           <a href="#" class="brand-logo">iStyle</a>
           <a href="#" data-target="mobile-nav" class="sidenav-trigger">
             <i class="material-icons">menu</i>
@@ -29,16 +39,16 @@
               <a href="/">Home</a>
             </li>
             <li>
-              <a href="agnebot.html">Angebote</a>
+              <a href="./agnebot.html">Angebote</a>
             </li>
             <li>
-              <a href="blog.html">Blog</a>
+              <a href="./blog.html">Blog</a>
             </li>
             <li>
-              <a href="ubermich.html">Uber mich</a>
+              <a href="./ubermich.html">Uber mich</a>
             </li>
             <li>
-              <a href="kontakt.html">Kontakt</a>
+              <a href="./kontakt.html">Kontakt</a>
             </li>
           </ul>
         </div>
@@ -50,69 +60,265 @@
       <a href="/">Home</a>
     </li>
     <li>
-      <a href="agnebot.html">Angebote</a>
+      <a href="./agnebot.html">Angebote</a>
     </li>
     <li>
-      <a href="blog.html">Blog</a>
+      <a href="./blog.html">Blog</a>
     </li>
     <li>
-      <a href="ubermich.html">Uber mich</a>
+      <a href="./ubermich.html">Uber mich</a>
     </li>
     <li>
-      <a href="kontakt.html">Kontakt</a>
+      <a href="./kontakt.html">Kontakt</a>
     </li>
   </ul>
 
+  <!-- NAVBAR END-->
+
+  <!-- Section: Slider -->
+  <section class="slider">
+    <ul class="slides">
+      <li>
+        <img class="responsive-img" src="../img/Offers_main_pic.jpeg">
+        <!-- random image -->
+        <div class="caption center-align agnebot-align-text">
+          <div class="contianer">
+
+            <!-- <div class="divider"></div> -->
+            <h2 class="">If you don't <span class="black-text agnebot-hover-text"><b>love</b></span> fashion, let me
+              <span class="red-text agnebot-hover-text"><b>love</b></span> it for you</h2>
+            <!-- <div class="divider"></div> -->
+          </div>
+        </div>
+      </li>
+
+    </ul>
+  </section>
 
 
 
 
-  <div>Angebot</div>
 
-
-  <!-- Section: Popular Places -->
-  <section id="popular" class="section section-popular scrollspy">
+  <!-- Section: Angebote -->
+  <section id="Angebote" class="section blue-grey darken-4">
     <div class="container">
+      <!-- FIRST ROW OF OFFERS-->
       <div class="row">
-        <h4 class="center">
-          <span class="teal-text">Popular</span> Places</h4>
-        <div class="col s12 m4">
-          <div class="card">
+        <h4></h4>
+        <!-- <h4 class="center"><span class="white-text">Angebote</span></h4> -->
+
+        <div class="col s12 m6">
+          <div class="card z-depth-3">
             <div class="card-image">
-              <img src="assets/img/shopping.jpg" alt="">
-              <span class="card-title">Cancun, Mexico</span>
+              <img class="responsive-img" src="../img/wadrobe_clean_out.jpg" alt="">
             </div>
             <div class="card-content">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum ea deserunt officia, dicta sint
-              perferendis.
+              <span class="card-title activator grey-text text-darken-4">Kleiderschrank-Check<i class="material-icons right">more_vert</i></span>
+            </div>
+            <div class="card-reveal blue-grey darken-4 white-text">
+              <span class="card-title white-text text-darken-4">Kleiderschrank-Check<i class="material-icons right">close</i></span>
+              <ul>
+                <li><i class="material-icons">done</i>
+                  Aussortierung von unpassenden Sachen, Accessoires, Schuhen
+                </li>
+                <li><i class="material-icons">done</i>
+                  Zusammenstellung von Outfits aus vorhandenen Klamotten
+                </li>
+                <li><i class="material-icons">done</i>
+                  Liste von fehlenden Sachen, Accessoires, Schuhen
+                </li>
+                <li><i class="material-icons">done</i>
+                  Wichtige Farb- und Stiltipps, die Dir im Alltag helfen werden neue Outfits zusammenzustellen
+                </li>
+              </ul>
+              <span class="flow-text"><i class="material-icons">directions_walk</i> Dauer: ca.1 St.</span>
+              <br>
+              <span class="flow-text"><i class="material-icons">payment</i> Pries: 89,&#8364;</span>
             </div>
           </div>
         </div>
-        <div class="col s12 m4">
-          <div class="card">
+
+        <div class="col s12 m6">
+          <div class="card z-depth-3">
             <div class="card-image">
-              <img src="assets/img/shopping2.jpg" alt="">
-              <span class="card-title">The Bahamas</span>
+              <img class="responsive-img" src="../img/shopping4.jpg" alt="">
             </div>
             <div class="card-content">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum ea deserunt officia, dicta sint
-              perferendis.
+              <span class="card-title activator grey-text text-darken-4">Shoppingbegleitung<i class="material-icons right">more_vert</i></span>
             </div>
-          </div>
-        </div>
-        <div class="col s12 m4">
-          <div class="card">
-            <div class="card-image">
-              <img src="assets/img/shopping3.jpg" alt="">
-              <span class="card-title">Nova Scotia</span>
-            </div>
-            <div class="card-content">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum ea deserunt officia, dicta sint
-              perferendis.
+            <div class="card-reveal white-grey darken-4 black-text">
+              <span class="card-title black-text text-darken-4">Shoppingbegleitung<i class="material-icons right">close</i></span>
+              <ul>
+                <li><i class="material-icons">done</i>
+                  Outfits für eine Saison
+                </li>
+                <li><i class="material-icons">done</i>
+                  5 bis 7 fertige Outfits für beliebige Anlässe
+                </li>
+                <li><i class="material-icons">done</i>
+                  Wichtige Farb- und Stiltipps, die Dir im Alltag helfen werden neue Outfits zusammenzustellen
+                </li>
+                <!-- <li><i class="material-icons">done</i>
+                  Wichtige Farb- und Stiltipps, die Dir im Alltag helfen werden neue Outfits zusammenzustellen
+                </li> -->
+              </ul>
+              <span class="flow-text"><i class="material-icons">directions_walk</i> Dauer: ca.1 St.</span>
+              <br>
+              <span class="flow-text"><i class="material-icons">payment</i> Pries: 89,&#8364;</span>
             </div>
           </div>
         </div>
       </div>
+      <!-- END OF FIRST ROW OF OFFERS-->
+
+
+      <!-- SECOND ROW OF OFFERS-->
+      <div class="row">
+        <h4></h4>
+        <!-- <h4 class="center"><span class="white-text">Angebote</span></h4> -->
+
+        <div class="col s12 m6">
+          <div class="card z-depth-3">
+            <div class="card-image">
+              <img class="responsive-img" src="../img/speed_fashion_assistance.jpg" alt="">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">Farb- und Stilberatung<i class="material-icons right">more_vert</i></span>
+            </div>
+            <div class="card-reveal blue-grey darken-4 white-text">
+              <span class="card-title white-text text-darken-4">Farb- und Stilberatung<i class="material-icons right">close</i></span>
+              <ul>
+                <li><i class="material-icons">done</i>
+                  Kurzes online Gespräch
+                </li>
+                <li><i class="material-icons">done</i>
+                  Tipps für die besten Farbkombinationen
+                </li>
+                <li><i class="material-icons">done</i>
+                  Stilistische Lösungen für den Alltag und
+                </li>
+                <li><i class="material-icons">done</i>
+                  Kleines Handbuch
+                </li>
+              </ul>
+              <span class="flow-text"><i class="material-icons">directions_walk</i> Dauer: ca.1 St.</span>
+              <br>
+              <span class="flow-text"><i class="material-icons">payment</i> Pries: 89,&#8364;</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m6">
+          <div class="card z-depth-3">
+            <div class="card-image">
+              <img class="responsive-img" src="../img/shopping2.jpg" alt="">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">Komplexe Beratung<i class="material-icons right">more_vert</i></span>
+            </div>
+            <div class="card-reveal white-grey darken-4 black-text">
+              <span class="card-title black-text text-darken-4">Komplexe Farb- <br> und Stilberatung<i class="material-icons right">close</i></span>
+              <ul>
+                <li><i class="material-icons">done</i>
+                  Individuelle Farbkarte
+                </li>
+                <li><i class="material-icons">done</i>
+                  Beispiele von den besten Farbkombinationen
+                </li>
+                <li><i class="material-icons">done</i>
+                  Länge
+                </li>
+                <li><i class="material-icons">done</i>
+                  Möglichkeiten der Figurkorrektur (nach Bedarf)
+                </li>
+                <li><i class="material-icons">done</i>
+                  Theoretische Kenntnisse von Stilarten und Trends
+                </li>
+                <li><i class="material-icons">done</i>
+                  Stilistische Lösungen für alle gewünschte Anlässe
+                </li>
+                <li><i class="material-icons">done</i>
+                  Imageberatung
+                </li>
+              </ul>
+              <span class="flow-text"><i class="material-icons">directions_walk</i> Dauer: ca.4-5 St.</span>
+              <br>
+              <span class="flow-text"><i class="material-icons">payment</i> Pries: 449,&#8364;</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END OF SECOND ROW OF OFFERS-->
+
+      <!-- THIRD ROW OF OFFERS-->
+      <div class="row">
+        <h4></h4>
+        <!-- <h4 class="center"><span class="white-text">Angebote</span></h4> -->
+
+        <div class="col s12 m6">
+          <div class="card z-depth-3">
+            <div class="card-image">
+              <img class="responsive-img" src="../img/shooting.jpeg" alt="">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">Leitung vom Fotoshooting<i class="material-icons right">more_vert</i></span>
+            </div>
+            <div class="card-reveal blue-grey darken-4 white-text">
+              <span class="card-title white-text text-darken-4">Leitung vom Fotoshooting<i class="material-icons right">close</i></span>
+              <ul>
+                <li><i class="material-icons">done</i>
+                  Zusammenstellung von 5-7 Outfits fürs Shooting
+                </li>
+                <li><i class="material-icons">done</i>
+                  Anwesenheit und Leitung vom Shooting
+                </li>
+                <li><i class="material-icons">done</i>
+                  Weitere Informationen finden Sie unter (Google Translate)
+                </li>
+                <!-- <li><i class="material-icons">done</i>
+                  Wichtige Farb- und Stiltipps, die Dir im Alltag helfen werden neue Outfits zusammenzustellen
+                </li> -->
+              </ul>
+              <span class="flow-text"><i class="material-icons">directions_walk</i> Dauer: ca.4-5 St.</span>
+              <br>
+              <span class="flow-text"><i class="material-icons">payment</i> Pries: 349,&#8364;</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m6">
+          <div class="card z-depth-3">
+            <div class="card-image">
+              <img class="responsive-img" src="../img/shopping.jpg" alt="">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">Shoppingbegleitung<i class="material-icons right">more_vert</i></span>
+            </div>
+            <div class="card-reveal white-grey darken-4 black-text">
+              <span class="card-title black-text text-darken-4">Shoppingbegleitung<i class="material-icons right">close</i></span>
+              <ul>
+                <li><i class="material-icons">done</i>
+                  Outfits für eine Saison
+                </li>
+                <li><i class="material-icons">done</i>
+                  5 bis 7 fertige Outfits für beliebige Anlässe
+                </li>
+                <li><i class="material-icons">done</i>
+                  Wichtige Farb- und Stiltipps, die Dir im Alltag helfen werden neue Outfits zusammenzustellen
+                </li>
+                <!-- <li><i class="material-icons">done</i>
+                    Wichtige Farb- und Stiltipps, die Dir im Alltag helfen werden neue Outfits zusammenzustellen
+                  </li> -->
+              </ul>
+              <span class="flow-text"><i class="material-icons">directions_walk</i> Dauer: ca.1 St.</span>
+              <br>
+              <span class="flow-text"><i class="material-icons">payment</i> Pries: 89,&#8364;</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END OF THIRD ROW OF OFFERS-->
+
     </div>
   </section>
 
@@ -121,17 +327,41 @@
 
   <!-- Footer -->
   <footer class="section blue-grey darken-4 white-text center">
-    <p class="flow-text">Copyrights iStyle &copy; 2018 <a href="assets/pages/privacypolicy.html">Disclamer</a></p>
-
+    <span>Copyrights iStyle &copy; 2018 -> <a href="./privacypolicy.html">private policy</a></span>
   </footer>
+
 
   <!--JavaScript at end of body for optimized loading-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+  <!--JavaScript at end of body for optimized loading-->
+  <script src="assets/js/jquery-3.3.1.js"></script>
+  <script src="assets/js/materialize.min.js"></script>
+  <script src="assets/js/init.js"></script>
 
   <script>
     // Sidenav
     const sideNav = document.querySelector('.sidenav');
     M.Sidenav.init(sideNav, {});
+
+    // Slider
+    const slider = document.querySelector('.slider');
+    M.Slider.init(slider, {
+      indicators: false,
+      height: 800,
+      transition: 0,
+      interval: 0,
+      fullWidth: true
+
+    });
+
+
+
+
+
+    // Material Boxed
+    const mb = document.querySelectorAll('.materialboxed');
+    M.Materialbox.init(mb, {});
 
 
 

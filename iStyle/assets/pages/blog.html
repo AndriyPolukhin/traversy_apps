@@ -6,7 +6,10 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--Import materialize.css-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-  <link rel="stylesheet" href="css/main.css">
+  <!-- IMPORTING FONTS -->
+  <link href="https://fonts.googleapis.com/css?family=Handlee|Roboto+Slab:300" rel="stylesheet">
+  <!-- MAIN STYLES-->
+  <link rel="stylesheet" href="../css/style.css">
   <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
     crossorigin="anonymous"></script>
   <!--Let browser know website is optimized for mobile-->
@@ -14,12 +17,19 @@
   <title>iStyle</title>
 </head>
 
-<body id="home" class="scrollspy">
+<body>
   <!-- Navbar -->
   <div class="navbar-fixed">
+
     <nav class="blue-grey darken-4">
+
       <div class="container">
         <div class="nav-wrapper">
+          <div class="right hide-on-med-and-down">
+            <a href="/">de</a>
+            <a href="/">en</a>
+            <a href="/">ru</a>
+          </div>
           <a href="#" class="brand-logo">iStyle</a>
           <a href="#" data-target="mobile-nav" class="sidenav-trigger">
             <i class="material-icons">menu</i>
@@ -29,16 +39,16 @@
               <a href="/">Home</a>
             </li>
             <li>
-              <a href="agnebot.html">Angebote</a>
+              <a href="./agnebot.html">Angebote</a>
             </li>
             <li>
-              <a href="blog.html">Blog</a>
+              <a href="./blog.html">Blog</a>
             </li>
             <li>
-              <a href="ubermich.html">Uber mich</a>
+              <a href="./ubermich.html">Uber mich</a>
             </li>
             <li>
-              <a href="kontakt.html">Kontakt</a>
+              <a href="./kontakt.html">Kontakt</a>
             </li>
           </ul>
         </div>
@@ -50,23 +60,154 @@
       <a href="/">Home</a>
     </li>
     <li>
-      <a href="agnebot.html">Angebote</a>
+      <a href="./agnebot.html">Angebote</a>
     </li>
     <li>
-      <a href="blog.html">Blog</a>
+      <a href="./blog.html">Blog</a>
     </li>
     <li>
-      <a href="ubermich.html">Uber mich</a>
+      <a href="./ubermich.html">Uber mich</a>
     </li>
     <li>
-      <a href="kontakt.html">Kontakt</a>
+      <a href="./kontakt.html">Kontakt</a>
     </li>
   </ul>
 
+  <!-- NAVBAR END-->
 
 
 
-  <div>Blog</div>
+
+  <!-- Section: Slider -->
+  <section class="slider">
+    <ul class="slides">
+      <li>
+        <img class="responsive-img" src="../img/collection-2.jpg">
+        <!-- random image -->
+        <div class="caption center-align agnebot-align-text">
+          <div class="contianer">
+
+            <!-- <div class="divider"></div> -->
+            <h2>
+              If you don't <span class="black-text agnebot-hover-text"><b>love</b></span> fashion, let me
+              <span class="red-text agnebot-hover-text"><b>love</b></span> it for you
+            </h2>
+
+            <div class="divider"></div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Section: BLOG -->
+  <section id="Blog" class="section blue-grey darken-4">
+    <div class="container">
+      <!-- FIRST ROW OF THE BLOG-->
+      <div class="row">
+        <h4></h4>
+
+        <div class="col s12 m6">
+          <div class="card z-depth-3">
+            <div class="card-image">
+              <img src="../img/shopping3.jpg">
+              <span class="card-title">Weitere Ideen</span>
+            </div>
+            <div class="card-content">
+              <p>В этом мире нет некрасивых людей, есть только те, кто не умеет видеть и выражать свою красоту и
+                индивидуальность.
+                Человек, который следит за последними тенденциями в мире, более гибкий, умеет подстраиваться под
+                настроение времени, в котором живет. Такой человек также важен для работодателя, т.к. этим он
+                транслирует свою способность идти в ногу со временем, развиваться и быть в курсе всех последних
+                событий.
+              </p>
+            </div>
+            <div class="card-action">
+              <button class="btn waves-effect darken-4 blue-grey">Read More</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m6">
+          <div class="card z-depth-3">
+            <div class="card-image">
+              <img src="../img/shopping3.jpg">
+              <span class="card-title">Weitere Ideen</span>
+            </div>
+            <div class="card-content">
+              <p>В этом мире нет некрасивых людей, есть только те, кто не умеет видеть и выражать свою красоту и
+                индивидуальность.
+                Человек, который следит за последними тенденциями в мире, более гибкий, умеет подстраиваться под
+                настроение времени, в котором живет. Такой человек также важен для работодателя, т.к. этим он
+                транслирует свою способность идти в ногу со временем, развиваться и быть в курсе всех последних
+                событий.
+              </p>
+            </div>
+            <div class="card-action">
+              <button class="btn waves-effect darken-4 blue-grey">Read More</button>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+      <!-- END OF THE SECOND ROW OF THE BLOG -->
+
+      <!-- FIRST ROW OF THE BLOG-->
+      <div class="row">
+        <h4></h4>
+
+        <div class="col s12 m6">
+          <div class="card z-depth-3">
+            <div class="card-image">
+              <img src="../img/shopping3.jpg">
+              <span class="card-title">Weitere Ideen</span>
+            </div>
+            <div class="card-content">
+              <p class="truncate">В этом мире нет некрасивых людей, есть только те, кто не умеет видеть и выражать свою
+                красоту и
+                индивидуальность.
+                Человек, который следит за последними тенденциями в мире, более гибкий, умеет подстраиваться под
+                настроение времени, в котором живет. Такой человек также важен для работодателя, т.к. этим он
+                транслирует свою способность идти в ногу со временем, развиваться и быть в курсе всех последних
+                событий.
+              </p>
+            </div>
+            <div class="card-action">
+              <button class="btn waves-effect darken-4 blue-grey">Read More</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m6">
+          <div class="card z-depth-3">
+            <div class="card-image">
+              <img src="../img/shopping3.jpg">
+              <span class="card-title">Weitere Ideen</span>
+            </div>
+            <div class="card-content">
+              <p class="truncate">В этом мире нет некрасивых людей, есть только те, кто не умеет видеть и выражать свою
+                красоту и
+                индивидуальность.
+                Человек, который следит за последними тенденциями в мире, более гибкий, умеет подстраиваться под
+                настроение времени, в котором живет. Такой человек также важен для работодателя, т.к. этим он
+                транслирует свою способность идти в ногу со временем, развиваться и быть в курсе всех последних
+                событий.
+              </p>
+            </div>
+            <div class="card-action">
+              <button class="btn waves-effect darken-4 blue-grey">Read More</button>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+      <!-- END OF THE SECOND ROW OF THE BLOG -->
+    </div>
+  </section>
 
 
 
@@ -76,9 +217,9 @@
 
   <!-- Footer -->
   <footer class="section blue-grey darken-4 white-text center">
-    <p class="flow-text">Copyrights iStyle &copy; 2018 <a href="assets/pages/privacypolicy.html">Disclamer</a></p>
-
+    <span>Copyrights iStyle &copy; 2018 -> <a href="./privacypolicy.html">private policy</a></span>
   </footer>
+
 
   <!--JavaScript at end of body for optimized loading-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
@@ -87,6 +228,17 @@
     // Sidenav
     const sideNav = document.querySelector('.sidenav');
     M.Sidenav.init(sideNav, {});
+
+    // Slider
+    const slider = document.querySelector('.slider');
+    M.Slider.init(slider, {
+      indicators: false,
+      height: 1200,
+      transition: 0,
+      interval: 0,
+      fullWidth: true
+
+    });
 
 
 
