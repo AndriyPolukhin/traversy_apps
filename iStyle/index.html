@@ -25,10 +25,13 @@
 
       <div class="container">
         <div class="nav-wrapper">
-          <div class="right hide-on-med-and-down">
-            <a class="active" href="/">de</a>
-            <a href="/">en</a>
-            <a href="/">ru</a>
+          <div class="right hide-on-med-and-down headers">
+            <!-- @TODO : SHIFT TO THE RIGHT, change the font size, capitalize, make spaces
+              ceratea a ul and li out of this links
+            -->
+            <a class="active" href="/">DE</a>
+            <a href="/">EN</a>
+            <a href="/">RU</a>
           </div>
           <!--<a href="#" class="brand-logo">
             iStyle
@@ -50,7 +53,7 @@
               <a href="assets/pages/blog.html">Blog</a>
             </li>
             <li>
-              <a href="assets/pages/ubermich.html">Uber mich</a>
+              <a href="assets/pages/ubermich.html">Über mich</a>
             </li>
             <li>
               <a href="assets/pages/kontakt.html">Kontakt</a>
@@ -71,7 +74,7 @@
       <a href="assets/pages/blog.html">Blog</a>
     </li>
     <li>
-      <a href="assets/pages/ubermich.html">Uber mich</a>
+      <a href="assets/pages/ubermich.html">Über mich</a>
     </li>
     <li>
       <a href="assets/pages/kontakt.html">Kontakt</a>
@@ -86,8 +89,8 @@
       <li>
         <img class="responsive-img" src="assets/img/main_page_slide1.jpg">
         <!-- random image -->
-        <div class="caption center-align">
-          <h2 class="headers">Style is no question of money</h2>
+        <div class="caption left-align">
+          <h2 class="headers quotes">Style is no question of money</h2>
 
         </div>
       </li>
@@ -95,7 +98,7 @@
         <img class="responsive-img" src="assets/img/main_page_slide.jpeg">
         <!-- random image -->
         <div class="caption left-align">
-          <h2 class="headers">We Work With All Budgets</h2>
+          <h2 class="headers quotes">Freude beim Shoppen</h2>
 
         </div>
       </li>
@@ -103,7 +106,7 @@
         <img class="responsive-img" src="assets/img/Offers_main_pic.jpeg">
         <!-- random image -->
         <div class="caption right-align">
-          <h2 class="headers">Special Offers</h2>
+          <h2 class="headers quotes">Wähle beliebiges Angebot aus</h2>
 
         </div>
       </li>
@@ -225,10 +228,12 @@
     const slider = document.querySelector('.slider');
     M.Slider.init(slider, {
       indicators: false,
-      height: 800,
+      height: 700,
+      width: 3000,
       transition: 500,
       interval: 6000,
-      fullWidth: true
+      fullWidth: true,
+      //fullHeight: true
 
     });
 
