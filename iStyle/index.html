@@ -21,21 +21,26 @@
   <!-- Navbar -->
   <div class="navbar-fixed">
 
-    <nav class="blue-grey darken-4">
+    <nav class="black">
 
       <div class="container">
         <div class="nav-wrapper">
           <div class="right hide-on-med-and-down">
-            <a href="/">de</a>
+            <a class="active" href="/">de</a>
             <a href="/">en</a>
             <a href="/">ru</a>
           </div>
-          <a href="#" class="brand-logo">iStyle</a>
+          <!--<a href="#" class="brand-logo">
+            iStyle
+          </a>-->
+          <img class="brand-logo" src="./assets/img/logo.jpg" alt="iStyle">
+
+
           <a href="#" data-target="mobile-nav" class="sidenav-trigger">
             <i class="material-icons">menu</i>
           </a>
           <ul class="right hide-on-med-and-down">
-            <li>
+            <li class="active">
               <a href="/">Home</a>
             </li>
             <li>
@@ -56,7 +61,7 @@
     </nav>
   </div>
   <ul class="sidenav" id="mobile-nav">
-    <li>
+    <li class="active">
       <a href="/">Home</a>
     </li>
     <li>
@@ -83,8 +88,7 @@
         <!-- random image -->
         <div class="caption center-align">
           <h2 class="headers">Style is no question of money</h2>
-          <h5 class="light grey-text text-lighten-3 hide-on-small-only">Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Quidem, provident eos dicta unde debitis</h5>
+
         </div>
       </li>
       <li>
@@ -92,8 +96,7 @@
         <!-- random image -->
         <div class="caption left-align">
           <h2 class="headers">We Work With All Budgets</h2>
-          <h5 class="light grey-text text-lighten-3 hide-on-small-only">Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Possimus delectus inventore neque impedit</h5>
+
         </div>
       </li>
       <li>
@@ -101,8 +104,7 @@
         <!-- random image -->
         <div class="caption right-align">
           <h2 class="headers">Special Offers</h2>
-          <h5 class="light grey-text text-lighten-3 hide-on-small-only">Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Sunt ipsum molestias excepturi doloremque</h5>
+
         </div>
       </li>
     </ul>
@@ -110,7 +112,7 @@
 
 
   <!-- Section: HOME -->
-  <section id="Home" class="section section-icons blue-grey darken-4 center">
+  <section id="Home" class="section section-icons  black center">
     <div class="container">
       <div class="row">
         <div class="col s12">
@@ -145,9 +147,14 @@
 
       <!-- MODAL START -->
       <div class="row ">
+
         <!-- Modal Trigger -->
-        <a class="waves-effect waves-light btn modal-trigger btn-floating btn-large  blue-grey lighten-5 z-depth-3"
-          href="#modal1"><i class="material-icons blue-grey darken-4 hoverable">email</i></a>
+        <div class="fixed-action-btn">
+          <a class="waves-effect waves-light btn modal-trigger btn-floating btn-large  blue-grey lighten-5 z-depth-3"
+            href="#modal1">
+            <i class="material-icons black hoverable">email</i>
+          </a>
+        </div>
         <!-- <button data-target="modal1" class="btn modal-trigger">Modal</button> -->
 
         <!-- Modal Structure -->
@@ -197,7 +204,7 @@
 
 
   <!-- Footer -->
-  <footer class="section blue-grey darken-4 white-text center">
+  <footer class="section black white-text center">
     <span class="headers">Copyrights iStyle &copy; 2018 -> <a href="assets/pages/privacypolicy.html">private policy</a></span>
   </footer>
 
@@ -209,7 +216,10 @@
   <script>
     // Sidenav
     const sideNav = document.querySelector('.sidenav');
-    M.Sidenav.init(sideNav, {});
+    M.Sidenav.init(sideNav, {
+      //edge: 'right',
+      draggable: true,
+    });
 
     // Slider
     const slider = document.querySelector('.slider');
