@@ -109,7 +109,7 @@ nav .brand-logo {
   display: inline-block;
   position: relative;
   /* float: left; */
-  left: -170px;
+  left: -25rem;
   margin-right: 10%;
   padding-top: 1%;
   height: 130px;
@@ -131,7 +131,7 @@ nav ul {
 
 nav ul a {
   text-transform: uppercase;
-  /* font-family: 'kilsonburgregular', 'vogamedium', sans-serif; */
+  font-family: 'kilsonburgregular', 'vogamedium', sans-serif;
   transition: all 0.5;
 }
 
