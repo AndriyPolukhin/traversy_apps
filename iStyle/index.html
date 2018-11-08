@@ -7,62 +7,87 @@
   <!--Import materialize.css-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
   <!-- IMPORTING FONTS -->
-  <link href="https://fonts.googleapis.com/css?family=Handlee|Roboto+Slab:300" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
   <!-- MAIN STYLES-->
   <link rel="stylesheet" href="assets/css/style.css">
   <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
     crossorigin="anonymous"></script>
+
+
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+  <!--
+    <link href=`${baseString}` rel="icon" type="image/x-icon" />
+  -->
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+
+
+
   <title>iStyle</title>
 </head>
 
 <body>
   <!-- Navbar -->
   <div class="navbar-fixed">
-
     <nav class="black">
-
+      <!-- CONTAINER START -->
       <div class="container">
         <div class="nav-wrapper">
+
           <div class="right hide-on-med-and-down headers">
-            <!-- @TODO : SHIFT TO THE RIGHT, change the font size, capitalize, make spaces
-              ceratea a ul and li out of this links
-            -->
-            <a class="active" href="/">DE</a>
-            <a href="/">EN</a>
-            <a href="/">RU</a>
+            <!-- THE NAVBAR DIVISION END -->
+            <div class="row">
+              <div class="col s4">
+                <img class="brand-logo" src="./assets/img/LOGO_iStyle.png" alt="iStyle">
+              </div>
+              <div class="col s8">
+
+                <ul class="language">
+                  <li>
+                    <a class="active" href="/">DE</a>
+                  </li>
+                  <li>
+                    <a href="/">EN</a>
+                  </li>
+                  <li>
+                    <a href="/">RU</a>
+                  </li>
+                </ul>
+
+                <ul class="right hide-on-med-and-down">
+                  <li class="active"><a href="/">Home</a>
+                  </li>
+                  <li>
+                    <a href="assets/pages/agnebot.html">Angebote</a>
+                  </li>
+                  <li>
+                    <a href="assets/pages/blog.html">Blog</a>
+                  </li>
+                  <li>
+                    <a href="assets/pages/ubermich.html">Über mich</a>
+                  </li>
+                  <li>
+                    <a href="assets/pages/kontakt.html">Kontakt</a>
+                  </li>
+                </ul>
+
+              </div>
+
+            </div>
+
+            <!-- THE NAVBAR DIVISION END -->
           </div>
-          <!--<a href="#" class="brand-logo">
-            iStyle
-          </a>-->
-          <img class="brand-logo" src="./assets/img/logo.jpg" alt="iStyle">
-
-
-          <a href="#" data-target="mobile-nav" class="sidenav-trigger">
-            <i class="material-icons">menu</i>
-          </a>
-          <ul class="right hide-on-med-and-down">
-            <li class="active">
-              <a href="/">Home</a>
-            </li>
-            <li>
-              <a href="assets/pages/agnebot.html">Angebote</a>
-            </li>
-            <li>
-              <a href="assets/pages/blog.html">Blog</a>
-            </li>
-            <li>
-              <a href="assets/pages/ubermich.html">Über mich</a>
-            </li>
-            <li>
-              <a href="assets/pages/kontakt.html">Kontakt</a>
-            </li>
-          </ul>
         </div>
       </div>
+      <!-- CONTAINER END -->
+      <a href="#" data-target="mobile-nav" class="sidenav-trigger">
+        <i class="material-icons">menu</i>
+      </a>
     </nav>
   </div>
+
   <ul class="sidenav" id="mobile-nav">
     <li class="active">
       <a href="/">Home</a>
@@ -81,6 +106,8 @@
     </li>
   </ul>
 
+
+
   <!-- NAVBAR END-->
 
   <!-- Section: Slider -->
@@ -90,7 +117,7 @@
         <img class="responsive-img" src="assets/img/main_page_slide1.jpg">
         <!-- random image -->
         <div class="caption left-align">
-          <h2 class="headers quotes">Style is no question of money</h2>
+          <h2 class="quotes">Style is no question of money</h2>
 
         </div>
       </li>
@@ -98,7 +125,7 @@
         <img class="responsive-img" src="assets/img/Slide.jpg">
         <!-- random image -->
         <div class="caption left-align">
-          <h2 class="headers quotes">Freude beim Shoppen</h2>
+          <h2 class="quotes">Freude beim Shoppen</h2>
 
         </div>
       </li>
@@ -106,10 +133,53 @@
         <img class="responsive-img" src="assets/img/AngeboteMAIN.jpg">
         <!-- random image -->
         <div class="caption right-align">
-          <h2 class="headers quotes">Wähle beliebiges Angebot aus</h2>
-
+          <h2 class="quotes">Wähle beliebiges Angebot aus</h2>
         </div>
       </li>
+      <!-- SLIDERS OFFERS -->
+      <li>
+        <img class="responsive-img" src="assets/img/wadrobe_clean_out.jpg">
+        <!-- random image -->
+        <div class="caption right-align">
+          <h2 class="quotes">Kleiderschrank-Check</h2>
+        </div>
+      </li>
+      <li>
+        <img class="responsive-img" src="assets/img/shopping4.jpg">
+        <!-- random image -->
+        <div class="caption right-align">
+          <h2 class="quotes">Shoppingbegleitung</h2>
+        </div>
+      </li>
+      <li>
+        <img class="responsive-img" src="assets/img/speed_fashion_assistance.jpg">
+        <!-- random image -->
+        <div class="caption right-align">
+          <h2 class="quotes">Farb- und Stilberatung</h2>
+        </div>
+      </li>
+      <li>
+        <img class="responsive-img" src="assets/img/shopping2.jpg">
+        <!-- random image -->
+        <div class="caption right-align">
+          <h2 class="quotes">Komplexe Beratung</h2>
+        </div>
+      </li>
+      <li>
+        <img class="responsive-img" src="assets/img/shooting.jpeg">
+        <!-- random image -->
+        <div class="caption right-align">
+          <h2 class="quotes">Leitung vom Fotoshooting</h2>
+        </div>
+      </li>
+      <li>
+        <img class="responsive-img" src="assets/img/gift _ard.jpg">
+        <!-- random image -->
+        <div class="caption right-align">
+          <h2 class="quotes">Geschenkgutschein</h2>
+        </div>
+      </li>
+      <!-- END OF SLIDERS OFFERS -->
     </ul>
   </section>
 
@@ -163,42 +233,119 @@
         <!-- Modal Structure -->
         <div id="modal1" class="modal">
           <div class="modal-content">
-            <div class="col s12">
-              <div class="card-panel  lighten-3">
-                <div class="input-field">
-                  <input type="text" placeholder="Name">
-                </div>
-                <div class="input-field">
-                  <input type="text" placeholder="Tel">
-                </div>
-                <div class="input-field">
-                  <input type="text" placeholder="Mail">
-                </div>
-                <div class="input-field">
-                  <textarea class="materialize-textarea" placeholder="Your Message"></textarea>
-                </div>
-                <div class="input-field">
-                  <p class="left">
-                    <label>
-                      <input type="checkbox" />
-                      <span>
-                        Call Me Back
-                      </span>
-                    </label>
-                    <label>
-                      <i class="modal-close darken-4 material-icons right">send</i>
-                    </label>
 
-                  </p>
+
+            <!-- NEW CONTENT START -->
+            <div class="row">
+              <div class="col s12">
+                <div class="card-panel grey lighten-3">
+                  <h4 class="headers">Contact Me</h4>
+                  <p>Falls Sie sich schon für ein Angebot entschieden haben kontaktieren Sie mich unter der
+                    Nummer: +49 157
+                    88 400 382 oder per E-Mail iStyle.Hamburg@gmail.com</p>
+                  <p>Falls Sie noch besondere Wünsche haben, füllen Sie bitte das Kontaktformular aus und ich
+                    werde mich im
+                    Laufe des Tages bei Ihnen melden.</p>
                 </div>
-                <div class="clearfix"></div>
               </div>
-
+              <div class="col s12">
+                <div class="card-panel grey lighten-3">
+                  <h4 class="headers">Kontaktformular</h4>
+                  <div class="row">
+                    <form class="col s12">
+                      <p>
+                        <label>
+                          <input type="checkbox" />
+                          <span>Kleiderschrank-Check</span>
+                        </label>
+                      </p>
+                      <p>
+                        <label>
+                          <input type="checkbox" />
+                          <span>Shoppingbegleitung</span>
+                        </label>
+                      </p>
+                      <p>
+                        <label>
+                          <input type="checkbox" />
+                          <span>Farb- und Stilberatung</span>
+                        </label>
+                      </p>
+                      <p>
+                        <label>
+                          <input type="checkbox" />
+                          <span>Komplexe Farb- und Stilberatung </span>
+                        </label>
+                      </p>
+                      <p>
+                        <label>
+                          <input type="checkbox" />
+                          <span>Leitung vom Fotoshooting</span>
+                        </label>
+                      </p>
+                      <p>
+                        <label>
+                          <input type="checkbox" />
+                          <span>Geschenkgutschein</span>
+                        </label>
+                      </p>
+                      <div class="row">
+                        <div class="input-field col s12">
+                          <i class="material-icons prefix">account_circle</i>
+                          <input id="icon_user" type="text" class="validate">
+                          <label for="icon_user">Name</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s12">
+                          <i class="material-icons prefix">phone</i>
+                          <input id="icon_telephone" type="tel" class="validate">
+                          <label for="icon_telephone">Handynummer</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s12">
+                          <i class="material-icons prefix">email</i>
+                          <input id="email_inline" type="email" class="validate">
+                          <label for="email_inline">E-Mail</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s12">
+                          <i class="material-icons prefix">mode_edit</i>
+                          <textarea id="message" class="materialize-textarea"></textarea>
+                          <label for="message">Ihre Nachricht</label>
+                        </div>
+                      </div>
+                      <p>
+                        <label>
+                          <input type="checkbox" />
+                          <span>Bitte um den Rückruf</span>
+                        </label>
+                      </p>
+                      <p>
+                        <label>
+                          <input type="checkbox" />
+                          <span>Stimme der <a href="/assets/pages/privacypolicy.html">Datenschutzerklärung </a>zu</span>
+                        </label>
+                      </p>
+                      <p>
+                        <label>
+                          <input class="btn darken-4 blue-grey headers" type="submit" value="send">
+                        </label>
+                      </p>
+                    </form>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+          <!-- NEW CONTENT END -->
 
         </div>
+
       </div>
+    </div>
     </div>
   </section>
 
@@ -220,8 +367,9 @@
     // Sidenav
     const sideNav = document.querySelector('.sidenav');
     M.Sidenav.init(sideNav, {
-      //edge: 'right',
+      edge: 'right',
       draggable: true,
+
     });
 
     // Slider

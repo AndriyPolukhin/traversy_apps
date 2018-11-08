@@ -7,7 +7,7 @@
   <!--Import materialize.css-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
   <!-- IMPORTING FONTS -->
-  <link href="https://fonts.googleapis.com/css?family=Handlee|Roboto+Slab:300" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
   <!-- MAIN STYLES-->
   <link rel="stylesheet" href="../css/style.css">
   <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
@@ -23,37 +23,62 @@
 
     <nav class="black">
 
+      <!-- CONTAINER START -->
       <div class="container">
         <div class="nav-wrapper">
-          <div class="right hide-on-med-and-down">
-            <a href="/">de</a>
-            <a href="/">en</a>
-            <a href="/">ru</a>
+
+          <div class="right hide-on-med-and-down headers">
+            <!-- THE NAVBAR DIVISION END -->
+            <div class="row">
+              <div class="col s4">
+                <img class="brand-logo" src="../img/LOGO_iStyle.png" alt="iStyle">
+              </div>
+              <div class="col s8">
+
+                <ul class="language">
+                  <li>
+                    <a class="active" href="/">DE</a>
+                  </li>
+                  <li>
+                    <a href="/">EN</a>
+                  </li>
+                  <li>
+                    <a href="/">RU</a>
+                  </li>
+                </ul>
+
+                <ul class="right hide-on-med-and-down">
+                  <li>
+                    <a href="/">Home</a>
+                  </li>
+                  <li>
+                    <a class="active" href="./agnebot.html">Angebote</a>
+                  </li>
+                  <li>
+                    <a href="./blog.html">Blog</a>
+                  </li>
+                  <li>
+                    <a href="./ubermich.html">Über mich</a>
+                  </li>
+                  <li>
+                    <a href="./kontakt.html">Kontakt</a>
+                  </li>
+                </ul>
+
+              </div>
+
+            </div>
+
+            <!-- THE NAVBAR DIVISION END -->
           </div>
-          <!--<a href="#" class="brand-logo">iStyle</a>-->
-          <img class="brand-logo" src="../img/logo.jpg" alt="iStyle">
-          <a href="#" data-target="mobile-nav" class="sidenav-trigger">
-            <i class="material-icons">menu</i>
-          </a>
-          <ul class="right hide-on-med-and-down">
-            <li>
-              <a href="/">Home</a>
-            </li>
-            <li class="active">
-              <a href="./agnebot.html">Angebote</a>
-            </li>
-            <li>
-              <a href="./blog.html">Blog</a>
-            </li>
-            <li>
-              <a href="./ubermich.html">Über mich</a>
-            </li>
-            <li>
-              <a href="./kontakt.html">Kontakt</a>
-            </li>
-          </ul>
         </div>
       </div>
+      <!-- CONTAINER END -->
+      <a href="#" data-target="mobile-nav" class="sidenav-trigger">
+        <i class="material-icons">menu</i>
+      </a>
+
+
     </nav>
   </div>
   <ul class="sidenav" id="mobile-nav">
@@ -344,7 +369,10 @@
   <script>
     // Sidenav
     const sideNav = document.querySelector('.sidenav');
-    M.Sidenav.init(sideNav, {});
+    M.Sidenav.init(sideNav, {
+      edge: 'right',
+      draggable: true,
+    });
 
     // Slider
     const slider = document.querySelector('.slider');

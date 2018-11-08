@@ -21,18 +21,48 @@
 /* FONTS FOR HEADERS */
 
 @font-face {
-  font-family: 'skarpa_regularregular';
-  src: url('fonts/skarpa_regular-webfont.woff2') format('woff2'), url('fonts/skarpa_regular-webfont.woff') format('woff');
+  font-family: 'vogamedium';
+  src: url('voga-medium-webfont.woff2') format('woff2'), url('voga-medium-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'skarpaltlight';
-  src: url('fonts/skarpalt-webfont.woff2') format('woff2'), url('fonts/skarpalt-webfont.woff') format('woff');
+  font-family: 'glamorbold';
+  src: url('glamor-bold-webfont.woff2') format('woff2'), url('glamor-bold-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'glamorbold_condensed_italic';
+  src: url('glamor-boldcondenseditalic-webfont.woff2') format('woff2'), url('glamor-boldcondenseditalic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'glamorcondensed';
+  src: url('glamor-condensed-webfont.woff2') format('woff2'), url('glamor-condensed-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'glamorcondensed_italic';
+  src: url('glamor-condenseditalic-webfont.woff2') format('woff2'), url('glamor-condenseditalic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'glamorextended';
+  src: url('glamor-extended-webfont.woff2') format('woff2'), url('glamor-extended-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* FONTS ENDED */
 
 .icon-block {
   padding: 0 15px;
@@ -43,23 +73,13 @@
 }
 
 body {
-  font-family: 'Handlee', cursive;
-  font-family: 'Roboto Slab', serif;
-}
-
-#Home,
-#Ubermich {
-  font-family: 'Handlee', cursive;
-  /* font-family: sans-serif; */
+  font-family: 'Lato';
 }
 
 /* #Home,
-#Angebote,
-#Blog,
-#Ubermich,
-#Contact {
-  background-image: url('../img/background_possible.jpg') !important;
-  background-size: cover;
+#Ubermich {
+  font-family: 'vogamedium';
+  font-family: 'Lato';
 } */
 
 /*
@@ -68,31 +88,29 @@ MAIN STYLES FOR ALL PAGES
 
 .headers,
 .brand-logo {
-  /* font-family: 'kilsonburgregular'; */
-  font-family: 'skarpa_regularregular';
-  font-family: 'kilsonburgregular';
+  font-family: 'vogamedium';
 }
 
 .quotes {
-  color: black;
   /* background: grey; */
+  /* color: white; */
+  color: black;
   margin-top: 450px;
+  font-family: 'vogamedium', 'glamorbold', serif;
+  font-weight: 700;
 }
 
-/* nav .brand-logo {
-  position: absolute;
-  color: #fff;
-  display: inline-block;
-  font-size: 2.1rem;
-  padding: 0;
-} */
+nav .container {
+  width: 100%;
+}
 
 nav .brand-logo {
   background-image: url(../img/logo.jpg);
   display: inline-block;
   position: relative;
-  float: left;
+  /* float: left; */
   left: -170px;
+  margin-right: 10%;
   padding-top: 1%;
   height: 130px;
   width: 208px;
@@ -107,44 +125,86 @@ nav {
 }
 
 nav ul {
-  padding-top: 70px;
+  /* padding-top: 70px; */
   float: right;
 }
 
 nav ul a {
   text-transform: uppercase;
-  font-family: 'kilsonburgregular';
+  /* font-family: 'kilsonburgregular', 'vogamedium', sans-serif; */
   transition: all 0.5;
 }
 
 nav ul a:hover {
-  color: blue;
+  color: #13aff0;
 }
+
+.language {
+  /* position: relative; */
+}
+
+.language li {}
 
 nav .sidenav-trigger {
   float: right;
 }
 
 .active a {
-  color: blue;
+  color: #13aff0;
+  /* text-decoration: underline;         */
 }
 
 .sidenav {
   background: black;
-  padding-top: 50%;
+  text-transform: uppercase;
+  padding-top: 25%;
+  -webkit-transform: translateX(105%);
+  transform: translateX(105%);
+}
+
+.modal {
+  background: black;
+}
+
+@media only screen and (max-width: 748px) {
+  .sidenav {
+    padding-top: 50%;
+  }
+  .sidenav.sidenav-fixed {
+    -webkit-transform: translateX(-105%);
+    transform: translateX(-105%);
+  }
+  .sidenav.sidenav-fixed.right-aligned {
+    -webkit-transform: translateX(-105%);
+    transform: translateX(-105%);
+  }
+  .sidenav.right-aligned {
+    right: 0;
+    -webkit-transform: translateX(105%);
+    transform: translateX(105%);
+    left: auto;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  .quotes {
+    margin-top: 20rem;
+    font-size: 2.9rem;
+    color: black;
+  }
 }
 
 .sidenav li.active a {
-  color: red;
+  color: #13aff0;
 }
 
 .sidenav li a:hover {
-  color: red;
+  color: #13aff0;
 }
 
 .sidenav li a {
   color: white;
-  font-family: 'kilsonburgregular';
+  text-transform: uppercase;
+  /* font-family: 'kilsonburgregular'; */
 }
 
 /* blue-grey darken-4 */
@@ -159,6 +219,10 @@ nav .sidenav-trigger {
 
 .fixed-action-btn a {
   border: 1px solid white;
+}
+
+.modal-content {
+  text-align: left;
 }
 
 /*
@@ -183,6 +247,14 @@ span.agnebot-hover-text:hover {
   color: red !important;
   cursor: pointer;
 }
+
+/* BLOG */
+
+.card {
+  margin-right: 1rem;
+}
+
+/* BLOG END */
 
 /*
 CONTACTS PAGE
