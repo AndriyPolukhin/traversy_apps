@@ -113,68 +113,70 @@
   <!-- Section: Slider -->
   <section class="slider">
     <ul class="slides">
-      <li>
-        <img class="responsive-img" src="assets/img/main_page_slide1.jpg">
-        <!-- random image -->
-        <div class="caption left-align">
-          <h2 class="quotes">Style is no question of money</h2>
 
-        </div>
-      </li>
-      <li>
-        <img class="responsive-img" src="assets/img/Slide.jpg">
-        <!-- random image -->
-        <div class="caption left-align">
+      <li class="firstSlide">
+        <!--
+          <img class="responsive-img" src="assets/img/Slide.jpg">
+        -->
+
+        <div class="caption right-align">
           <h2 class="quotes">Freude beim Shoppen</h2>
 
         </div>
       </li>
-      <li>
+      <li class="secondSlide">
+        <!--
         <img class="responsive-img" src="assets/img/AngeboteMAIN.jpg">
-        <!-- random image -->
+         -->
         <div class="caption right-align">
-          <h2 class="quotes">Wähle beliebiges Angebot aus</h2>
+          <h2 class="quotes">Der erste Eindruck entscheidet über deinen Erfolg. Sei sichtbar.</h2>
         </div>
       </li>
       <!-- SLIDERS OFFERS -->
-      <li>
+      <li class="offser_1">
+        <!-- random image
         <img class="responsive-img" src="assets/img/wadrobe_clean_out.jpg">
-        <!-- random image -->
+        -->
         <div class="caption right-align">
           <h2 class="quotes">Kleiderschrank-Check</h2>
         </div>
       </li>
-      <li>
+      <li class="offser_2">
+        <!-- random image
         <img class="responsive-img" src="assets/img/shopping4.jpg">
-        <!-- random image -->
+        -->
         <div class="caption right-align">
           <h2 class="quotes">Shoppingbegleitung</h2>
         </div>
       </li>
-      <li>
+      <li class="offser_3">
+        <!-- random image
         <img class="responsive-img" src="assets/img/speed_fashion_assistance.jpg">
-        <!-- random image -->
+         -->
         <div class="caption right-align">
           <h2 class="quotes">Farb- und Stilberatung</h2>
         </div>
       </li>
-      <li>
+      <li class="offser_4">
+        <!-- random image
         <img class="responsive-img" src="assets/img/shopping2.jpg">
-        <!-- random image -->
+        -->
         <div class="caption right-align">
           <h2 class="quotes">Komplexe Beratung</h2>
         </div>
       </li>
-      <li>
-        <img class="responsive-img" src="assets/img/shooting.jpeg">
-        <!-- random image -->
+      <li class="offser_5">
+        <!--
+          <img class="responsive-img" src="assets/img/shooting.jpeg">
+         -->
         <div class="caption right-align">
           <h2 class="quotes">Leitung vom Fotoshooting</h2>
         </div>
       </li>
-      <li>
+      <li class="offser_6">
+        <!--
         <img class="responsive-img" src="assets/img/gift _ard.jpg">
-        <!-- random image -->
+         -->
         <div class="caption right-align">
           <h2 class="quotes">Geschenkgutschein</h2>
         </div>
@@ -376,13 +378,15 @@
     const slider = document.querySelector('.slider');
     M.Slider.init(slider, {
       indicators: false,
-      height: 700,
-      width: 3000,
+      height: 800,
       transition: 500,
       interval: 6000,
       fullWidth: true,
-      //fullHeight: true
 
+      //width: 3000,
+      //fullHeight: true,
+      //full_width: true,
+      //full_height: true
     });
 
 

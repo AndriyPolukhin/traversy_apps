@@ -11,13 +11,6 @@
 
 /* FONTS */
 
-@font-face {
-  font-family: 'kilsonburgregular';
-  src: url('fonts/kilsonburg-webfont.woff2') format('woff2'), url('fonts/kilsonburg-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
 /* FONTS FOR HEADERS */
 
 @font-face {
@@ -62,6 +55,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'kilsonburgregular';
+  src: url('fonts/kilsonburg-webfont.woff2') format('woff2'), url('fonts/kilsonburg-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* FONTS ENDED */
 
 .icon-block {
@@ -96,7 +96,8 @@ MAIN STYLES FOR ALL PAGES
   /* color: white; */
   color: black;
   margin-top: 450px;
-  font-family: 'vogamedium', 'glamorbold', serif;
+  /* font-family: 'vogamedium', 'glamorbold', serif; */
+  font-family: 'kilsonburgregular';
   font-weight: 700;
 }
 
@@ -131,7 +132,7 @@ nav ul {
 
 nav ul a {
   text-transform: uppercase;
-  font-family: 'kilsonburgregular', 'vogamedium', sans-serif;
+  font-family: 'kilsonburgregular';
   transition: all 0.5;
 }
 
@@ -164,6 +165,64 @@ nav .sidenav-trigger {
 
 .modal {
   background: black;
+}
+
+/* SLIDES IMAGES AS A BACKGROUND */
+
+.firstSlide {
+  background-image: url('../img/Slide.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.secondSlide {
+  background-image: url('../img/AngeboteMAIN.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.offser_1 {
+  background-image: url('../img/wadrobe_clean_out.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.offser_2 {
+  background-image: url('../img/shopping4.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.offser_3 {
+  background-image: url('../img/speed_fashion_assistance.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.offser_4 {
+  background-image: url('../img/shopping2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.offser_5 {
+  background-image: url('../img/shooting.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.offser_6 {
+  background-image: url('../img/gift1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 @media only screen and (max-width: 748px) {
