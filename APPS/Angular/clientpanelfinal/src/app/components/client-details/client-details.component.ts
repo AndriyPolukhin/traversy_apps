@@ -26,8 +26,9 @@ export class ClientDetailsComponent implements OnInit {
   ngOnInit() {
     // Get id from url when component loads
     this.id = this.route.snapshot.params['id'];
+    console.log(this.id);
     // Get client
-    this.clientService.getClients(this.id).subscribe(client => {
+    this.clientService.getClient(this.id).subscribe(client => {
       if (client != null) {
         if (client.balance > 0) {
           this.hasBalance = true;

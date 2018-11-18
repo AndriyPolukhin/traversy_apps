@@ -50,23 +50,24 @@ export class ClientService {
   newClient(client: Client) {
     this.clientsCollection.add(client);
   }
-
-  getClient(id: string): Observable<Client> {
-    this.clientDoc = this.afs.doc<Client>(`client/${id}`);
-    this.client = this.clientDoc.snapshotChanges().pipe(
-      map(actions => actions.map(a => {
-        if (a.payload.exists === false) {
-          return null;
-        } else {
-          const data = a.payload.doc.data() as Client;
-          data.id = a.payload.id;
-
-          return data;
-
-        }
-      })));
-    return this.client;
-  }
+  /*
+    getClient(id: string): Observable<Client> {
+      this.clientDoc = this.afs.doc<Client>(`client/${id}`);
+      this.client = this.clientDoc.snapshotChanges().pipe(
+        map(actions => actions.map(a => {
+          if (a.payload.exists === false) {
+            return null;
+          } else {
+            const data = a.payload.doc.data() as Client;
+            data.id = a.payload.doc.id;
+  
+            return data;
+  
+          }
+        })));
+      return this.client;
+    }
+    */
   /*
    getClient(id: string): Observable<Client> {
      this.clientDoc = this.afs.doc<Client>(`client/${id}`);
@@ -82,5 +83,22 @@ export class ClientService {
      return this.client;
    }
   */
+
+  getClient(id: string): Observable<Client> {
+    this.clientDoc = this.afs.doc<Client>(`client/${id}`);
+    this.client = this.clientDoc.snapshotChanges().pipe(
+      map(a => {
+        if (a.payload.exists === false) {
+          return null;
+        } else {
+          const data = a.payload.doc.data() as Client;
+          data.id = a.payload.doc.id;
+
+          return data;
+
+        }
+      }));
+    return this.client;
+  }
 
 }

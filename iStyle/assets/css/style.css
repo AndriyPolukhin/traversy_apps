@@ -72,6 +72,11 @@
   font-size: inherit;
 }
 
+/* body * {
+  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.8);
+} */
+
 body {
   font-family: 'Lato';
 }
@@ -101,8 +106,14 @@ MAIN STYLES FOR ALL PAGES
   font-weight: 700;
 }
 
+.navbar-fixed {
+  width: 100%;
+  margin: auto;
+}
+
 nav .container {
   width: 100%;
+  max-width: 1649px;
 }
 
 nav .brand-logo {
@@ -110,7 +121,7 @@ nav .brand-logo {
   display: inline-block;
   position: relative;
   /* float: left; */
-  left: -25rem;
+  left: -40rem;
   margin-right: 10%;
   padding-top: 1%;
   height: 130px;
@@ -168,6 +179,20 @@ nav .sidenav-trigger {
 }
 
 /* SLIDES IMAGES AS A BACKGROUND */
+
+/* .slider .slides li img {
+  background-size: contain;
+  height: 100%;
+  width: 100%;
+  height: 100vh;
+  height: 100%;
+}
+
+img.responsive-img {
+  max-width: 100%;
+  width: 70%;
+  height: 100%;
+} */
 
 .firstSlide {
   background-image: url('../img/Slide.jpg');
