@@ -40,30 +40,30 @@ export class ClientService {
     this.clientsCollection.add(client);
   }
 
-  // getClient(id: string): Observable<Client> {
-  //   this.clientDoc = this.afs.doc<Client>(`clients/${id}`)
-
-  //   this.client = this.clientDoc.snapshotChanges().map(action => {
-  //     if (action.payload.exists === false) {
-  //       return null;
-  //     } else {
-  //       const data = action.payload.data() as Client;
-  //       data.id = action.payload.id;
-  //       return data;
-  //     }
-  //   });
-  //   console.log(this.client);
-  //   return this.client;
-  // }
-
   getClient(id: string): Observable<Client> {
+    this.clientDoc = this.afs.doc<Client>(`clients/${id}`)
 
-    this.clientsCollection = this.afs.collection<Client>(`clients/${id}`);
-
-    this.client = this.clientsCollection.valueChanges();
-
+    this.client = this.clientDoc.snapshotChanges().map(action => {
+      if (action.payload.exists === false) {
+        return null;
+      } else {
+        const data = action.payload.data() as Client;
+        data.id = action.payload.id;
+        return data;
+      }
+    });
+    console.log(this.client);
     return this.client;
   }
+
+  // getClient(id: string): Observable<Client> {
+
+  //   this.clientsCollection = this.afs.collection<Client>(`clients/${id}`);
+
+  //   this.client = this.clientsCollection.valueChanges();
+
+  //   return this.client;
+  // }
 
 
 
