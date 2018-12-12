@@ -47,6 +47,8 @@ export class Provider extends Component {
     dispatch: action => this.setState(state => reducer(state, action))
   };
 
+
+
   render() {
     return (
       <Context.Provider value={this.state}>
