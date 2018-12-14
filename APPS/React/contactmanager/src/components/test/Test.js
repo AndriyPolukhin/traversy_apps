@@ -1,45 +1,34 @@
 import React, { Component } from 'react'
+import { PropTypes } from 'prop-types';
+import AddContact from './../contacts/AddContact';
 
 class Test extends Component {
 
   state = {
-    test: 'test'
+    title: '',
+    body: '',
+    url: ''
   };
 
   componentDidMount() {
-    console.log('componentDidMount...');
+    fetch('https://jsonplaceholder.typicode.com/posts/1')
+      .then(response => response.json())
+      .then(data => this.setState({
+        title: data.title,
+        body: data.body,
+        url: data.url
+      }));
   }
 
-  componentWillMount() {
-    console.log('componentWillMount...');
-  }
 
-  componentDidUpdate() {
-    console.log('componentDidUpdate...');
-  }
-
-  componentWillUpdate() {
-    console.log('componentWillUpdate...');
-  }
-
-  componentWillReceiveProps(nextProps, nextState) {
-    console.log('componentWillReceiveProps...');
-  }
-
-  static getDerivedStateFromProps(nextProps, prevState) {
-    return {
-      test: 'something'
-    }
-  }
-
-  getSnapshotBeforeUpdate(prevProps, prevState) {
-    console.log('getSnapshotBeforeUpdate...');
-  }
 
   render() {
+    const { title, body, url } = this.state;
     return (
       <div>
-        <h1>Test Component</h1>
+        <h1>{title}</h1>
+        <p>{body}</p>
+        <a href="{url}">Link</a>
       </div>
     )
   }
