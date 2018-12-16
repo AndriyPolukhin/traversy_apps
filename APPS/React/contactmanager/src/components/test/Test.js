@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { PropTypes } from 'prop-types';
-import AddContact from './../contacts/AddContact';
+
+
 
 class Test extends Component {
 
@@ -22,13 +22,15 @@ class Test extends Component {
 
 
 
+
+
   render() {
-    const { title, body, url } = this.state;
+    const { title, body, } = this.state;
     return (
       <div>
         <h1>{title}</h1>
         <p>{body}</p>
-        <a href="{url}">Link</a>
+        {/* <a href="{url}">Link</a> */}
       </div>
     )
   }
