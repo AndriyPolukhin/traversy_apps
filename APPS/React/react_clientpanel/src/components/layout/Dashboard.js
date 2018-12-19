@@ -13,5 +13,9 @@ export default () => {
         <SideBar />
       </div>
     </div>
-  )
-}
+  );
+};
+
+
+
+
