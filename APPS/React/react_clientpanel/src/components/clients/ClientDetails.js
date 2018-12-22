@@ -6,7 +6,7 @@ import { compose } from 'redux'
 import { firestoreConnect } from 'react-redux-firebase'
 import Spinner from '../layout/Spinner';
 import classnames from 'classnames';
-import App from './../../App';
+
 
 
 class ClientDetails extends Component {
