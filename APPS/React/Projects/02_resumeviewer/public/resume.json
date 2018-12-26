@@ -1,0 +1,200 @@
+{
+  "main": {
+    "name": "Andriy Polukhin",
+    "occupation": "Web Developer, programmer and designer",
+    "description": "Self-taught software engineer that designa and programms websites and web applications",
+    "image": "http://localhost:3000/images/profilepic.jpg",
+    "bio": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.",
+    "email": "andriy.poluikhin@gmail.com",
+    "phone": "093-357-0119",
+    "address": {
+      "street": "Rosengraten",
+      "city": "Hamburg",
+      "state": "DE",
+      "zip": "20293"
+    },
+    "webstire": "http://andriy.polukhin@github.io/resume",
+    "resumedownload": "http://download.com/resume.pdf",
+    "social": [
+      {
+        "name": "facebook",
+        "url": "http://facebook.com",
+        "className": "fab fa-facebook"
+      },
+      {
+        "name": "twitter",
+        "url": "http://twitter.com",
+        "className": "fab fa-twitter"
+      },
+      {
+        "name": "google-plus",
+        "url": "http://googleplus.com",
+        "className": "fab fa-google-plus"
+      },
+      {
+        "name": "linkedin",
+        "url": "http://linkedin.com",
+        "className": "fab fa-linkedin"
+      },
+      {
+        "name": "instagram",
+        "url": "http://instagram.com",
+        "className": "fab fa-instagram"
+      },
+      {
+        "name": "github",
+        "url": "http://github.com",
+        "className": "fab fa-github"
+      },
+      {
+        "name": "skype",
+        "url": "http://skype.com",
+        "className": "fab fa-skype"
+      }
+    ]
+  },
+  "resume": {
+    "education": [
+      {
+        "school": "Univesity of Life",
+        "degree": "Maste in Graphic Design",
+        "graduated": "April 2007",
+        "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam."
+      },
+      {
+        "school": "School of Cool Designers",
+        "degree": "B.A. Degree in Graphic Design",
+        "graduated": "March 2003",
+        "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam."
+      }
+    ],
+    "work": [
+      {
+        "company": "Awesome Design Studio",
+        "title": "Senior UX Designer",
+        "years": "MAtch 2010 - Present",
+        "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam."
+      },
+      {
+        "company": "Super Cool Studio",
+        "title": "UX Designer",
+        "years": "Match 2007 - February 2010",
+        "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam."
+      }
+    ],
+    "skills": [
+      {
+        "name": "Photoshop",
+        "level": "60%"
+      },
+      {
+        "name": "Illustrator",
+        "level": "55%"
+      },
+      {
+        "name": "Wordpress",
+        "level": "50%"
+      },
+      {
+        "name": "CSS",
+        "level": "90%"
+      },
+      {
+        "name": "HTML5",
+        "level": "80%"
+      },
+      {
+        "name": "jQuery",
+        "level": "50%"
+      }
+    ]
+  },
+  "portfolio": {
+    "projects": [
+      {
+        "title": "Coffee Cup",
+        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+        "category": "illustrator",
+        "tags": "Branding, Web Design",
+        "image": "coffee.jpg",
+        "url": "http://port1.com",
+        "modal": "#modal-01"
+      },
+      {
+        "title": "Console",
+        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+        "category": "Web Design",
+        "tags": "Branding, Web Development",
+        "image": "console.jpg",
+        "url": "http://port2.com",
+        "modal": "#modal-02"
+      },
+      {
+        "title": "Judah",
+        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+        "category": "Web Development",
+        "tags": "Branding, Web Programming",
+        "image": "judah.jpg",
+        "url": "http://port3.com",
+        "modal": "#modal-03"
+      },
+      {
+        "title": "Into the LIght",
+        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+        "category": "Photography",
+        "tags": "Photography, Design",
+        "image": "into-the-light.jpg",
+        "url": "http://port4.com",
+        "modal": "#modal-04"
+      },
+      {
+        "title": "Farmer Boy",
+        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+        "category": "Branding",
+        "tags": "Branding, Web Design",
+        "image": "farmerboy.jpg",
+        "url": "http://port5.com",
+        "modal": "#modal-05"
+      },
+      {
+        "title": "Girl",
+        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+        "category": "Photography",
+        "tags": "Photography, Graphic Design",
+        "image": "girl.jpg",
+        "url": "http://port6.com",
+        "modal": "#modal-06"
+      },
+      {
+        "title": "Origami",
+        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+        "category": "Illustration",
+        "tags": "Branding, Illustration",
+        "image": "origami.jpg",
+        "url": "http://port7.com",
+        "modal": "#modal-07"
+      },
+      {
+        "title": "Retrocam",
+        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+        "category": "Web Development",
+        "tags": "Photography",
+        "image": "retrocam.jpg",
+        "url": "http://port8.com",
+        "modal": "#modal-08"
+      }
+    ]
+  },
+  "testimonials": {
+    "testimonials": [
+      {
+        "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.Cum sociis",
+        "user": "Anastasia Tsukrova"
+      },
+      {
+        "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.Cum sociis",
+        "user": "Alexandra Ivanova"
+      }
+    ]
+  }
+}
