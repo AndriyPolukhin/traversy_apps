@@ -1,0 +1,27 @@
+{
+  "name": "001_ReactWebpack",
+  "version": "1.0.0",
+  "description": "React with Webpack",
+  "main": "index.js",
+  "author": "itnext article",
+  "license": "MIT",
+"scripts": {
+  "start": "webpack-dev-server --open",
+  "build": "npm run clean && npm run compile",
+  "clean": "rm -rf ./build/index.bundle.js",
+  "compile": "NODE_ENV=production webpack --config ./webpack.config.js --progress"
+},
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^8.0.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "webpack": "^4.28.3",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.14"
+  },
+  "dependencies": {
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  }
+}
