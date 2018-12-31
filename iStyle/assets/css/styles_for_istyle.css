@@ -1,0 +1,552 @@
+/******************************************************
+* ISTYLE WEBSITE STYLE SHEET
+* 0. FONTS
+* 1. LAYOUT WP
+* 2. MENU NAVIGATION
+* 3. TYPOGRAPHY
+* 4. GENERAL STYLING
+* 5. LAYOUT
+* 6. MEDIA QUERIES
+*******************************************************/
+
+/******************************************************
+* 0. FONTS IMPORTS
+*******************************************************/
+
+/** ALTERNATIVE FOR BODY **/
+
+@font-face {
+  font-family: 'vogamedium';
+  src: url('wp-content/themes/dispatch-child/fonts/voga-medium-webfont.woff2') format('woff2'), url('wp-content/themes/dispatch-child/fonts/voga-medium-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Material Icons';
+  src: url('wp-content/themes/dispatch-child/fonts/MaterialIcons-Regular.woff2') format('woff2'), url('wp-content/themes/dispatch-child/fonts/MaterialIcons-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*** FONT FOR HEADERS AND TITLE ****/
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('wp-content/themes/dispatch-child/fonts/Oswald-Regular.ttf') format('ttf'), url('wp-content/themes/dispatch-child/fonts/Oswald-Bold.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*** FONT FOR PARAGRAPHS AND BODY TEXT ****/
+
+@font-face {
+  font-family: 'Barlow Semi Condensed';
+  src: url('wp-content/themes/dispatch-child/fonts/BarlowSemiCondensed-Regular.ttf') format('ttf'), url('wp-content/themes/dispatch-child/fonts/BarlowSemiCondensed-Bold.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*** FONT FOR MENU STYLES ****/
+
+@font-face {
+  font-family: 'kilsonburgregular';
+  src: url('wp-content/themes/dispatch-child/fonts/kilsonburg-webfont.woff2') format('woff2'), url('wp-content/themes/dispatch-child/fonts/kilsonburg-webfont.woff') format('woff'), url('https://istyle-hamburg.com/wp-content/themes/dispatch-child/fonts/kilsonburg-webfont.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/******************************************************
+* 1. LAYOUT WP
+*******************************************************/
+
+.container {
+  width: 100%;
+  max-width: 1649px;
+}
+
+.entry-content {
+  width: 100%;
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/** MAKES META SLIDER FULL WIDTH **/
+
+.full-width {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+#widgetized-template-page-content {
+  padding-top: 1rem;
+  padding-bottom: 0;
+}
+
+/******************************************************
+* 2. MENU NAVIGATION
+*******************************************************/
+
+.navbar-fixed {
+  width: 100%;
+  margin: auto;
+}
+
+nav .container {
+  height: 100px;
+  max-width: 1649px;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+nav .brand-logo {
+  display: inline-block;
+  position: relative;
+  left: -40rem;
+  margin-right: 10%;
+  height: 100px;
+  width: 208px;
+}
+
+nav ul a {
+  text-transform: uppercase;
+  font-family: 'kilsonburgregular';
+  transition: all 0.5;
+}
+
+nav ul a:hover {
+  color: #13aff0;
+}
+
+nav .sidenav-trigger {
+  float: right;
+}
+
+.active a {
+  color: #13aff0;
+}
+
+#header>.hgrid {
+  max-width: 100%;
+}
+
+#menu-primary-items>li {
+  /* right: -7rem; */
+}
+
+#menu-primary-items>li>a {
+  color: #fff;
+  padding: 3rem 0px 0px 10px;
+  font-family: "kilsonburgregular", "Oswald", sans-serif;
+  text-transform: uppercase;
+  transition: all 0.5;
+  text-decoration: none;
+  position: relative;
+}
+
+#menu-primary-items>li>a:after {
+  content: '';
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  width: 0%;
+  border-bottom: 2px solid #fff;
+  transition: 0.4s;
+}
+
+#menu-primary-items>li>a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+#menu-primary-items>li>a:hover:after {
+  width: 110%;
+}
+
+#site-logo-image img {
+  position: relative;
+  top: 0.5rem;
+  max-height: 7rem;
+  width: auto;
+  /* margin-left: -10%; */
+}
+
+#topbar {
+  position: absolute;
+  z-index: 2;
+  top: 1.5rem;
+  font-size: 0.85em;
+  right: 1rem;
+  width: 100px;
+  background: black;
+  color: white;
+  font-family: 'kilsonburgregular';
+}
+
+#topbar ul>li>a {
+  font-size: 1em;
+  color: #fff;
+  padding: 3rem 0 0 0;
+  font-family: "kilsonburgregular", "Oswald", sans-serif;
+  text-transform: uppercase;
+  transition: all 0.5;
+}
+
+#topbar ul>li>a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.inline-nav .widget_nav_menu li a {
+  margin: 0 0 0 0;
+  position: relative;
+}
+
+.inline-nav .widget_nav_menu li a:after {
+  content: "";
+}
+
+/** MODAL COLOR BACKGROUND **/
+
+.modal {
+  background: black;
+}
+
+/** HIDE THE SCROLLBAR ON MODAL **/
+
+::-webkit-scrollbar {
+  display: block;
+  width: 1rem;
+}
+
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #212121;
+}
+
+.modal-content {
+  text-align: left;
+}
+
+/******************* SIDE NAV NOT USED RIGHT NOW*****************/
+
+.sidenav {
+  background: black;
+  text-transform: uppercase;
+  padding-top: 25%;
+  -webkit-transform: translateX(105%);
+  transform: translateX(105%);
+}
+
+.sidenav li.active a {
+  color: #13aff0;
+}
+
+.sidenav li a:hover {
+  color: #13aff0;
+}
+
+.sidenav li a {
+  color: white;
+  text-transform: uppercase;
+  /* font-family: 'kilsonburgregular'; */
+}
+
+/******************* SIDE NAV NOT USED RIGHT NOW *****************/
+
+/******************************************************
+* 3. TYPOGRAPHY
+*******************************************************/
+
+/*******
+Headers : OSWALD
+body text: Barlow+Semi+Condensed
+*****/
+
+body {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.headers {
+  font-family: 'Oswald', sans-serif;
+}
+
+.headers .home-page {
+  margin-top: 0;
+}
+
+#Home {
+  padding: 0;
+}
+
+#Home .card-panel {
+  padding-top: 10px;
+  margin-top: -1rem;
+}
+
+.base-text {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.text-main {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-font-smoothing: antialiased !important;
+  text-rendering: optimizelegibility !important;
+  letter-spacing: .03em;
+  color: #000;
+  font-size: 1rem;
+  line-height: 1.25em;
+  padding: 0 0 0 0;
+  text-align: justify;
+}
+
+.fas {
+  /* font-weight: 300; */
+}
+
+.fa-times {
+  font-size: 1rem;
+  color: grey;
+}
+
+.black {
+  background: black !important;
+}
+
+.agnebote-link {
+  font-weight: 400;
+  text-decoration: underline;
+}
+
+body * {
+  background: rgba(0, 0, 0, 0)
+}
+
+/******************************************************
+* 4. GENERAL STYLING
+*******************************************************/
+
+/** DELETE SOME UN NEEDED BORDERS FROM WP **/
+
+.entry-content {
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+/** WHERE IS THIS USED? **/
+
+.quotes {
+  color: black;
+  margin-top: 450px;
+  font-family: 'kilsonburgregular';
+  font-weight: 700;
+}
+
+.image-text {
+  text-align: center;
+  font-size: 3rem;
+  font-family: 'vogamedium';
+}
+
+/* SLIDES IMAGES AS A BACKGROUND */
+
+/** NOT USED **/
+
+.carousel {
+  height: 100vh;
+  width: 100%;
+}
+
+/*
+ STYLES FOR THE HOME PAGE
+*/
+
+.fixed-action-btn a {
+  border: 1px solid white;
+}
+
+/********************************
+4.1 STYLES AT AGNEBOT
+*****************************/
+
+.agnebot-align-text {
+  height: 100%;
+  align-items: center;
+  display: flex;
+  margin-top: 150px;
+  margin-left: 170px;
+  /* right: 100px; */
+}
+
+/* BLOG */
+
+.card {
+  margin-right: 1rem;
+}
+
+/* BLOG END */
+
+/*************************
+4.2 CONTACTS PAGE FORM STYLES
+**************************/
+
+/* label color */
+
+.input-field label {
+  color: #000;
+}
+
+/* label focus color */
+
+.input-field input[type=text]:focus+label {
+  color: #000;
+}
+
+/* label underline focus color */
+
+.input-field input[type=text]:focus {
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000;
+}
+
+/* valid color */
+
+.input-field input[type=text].valid {
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000;
+}
+
+/* invalid color */
+
+.input-field input[type=text].invalid {
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000;
+}
+
+/* icon prefix focus color */
+
+.input-field .prefix.active {
+  color: #000;
+}
+
+.section-contact span {
+  color: #000;
+}
+
+[type="checkbox"]:checked+span:not(.lever):before {
+  top: -4px;
+  left: -5px;
+  width: 12px;
+  height: 22px;
+  border-top: 2px solid transparent;
+  border-left: 2px solid transparent;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+  -webkit-transform: rotate(40deg);
+  transform: rotate(40deg);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
+}
+
+input:not([type]):focus:not([readonly])+label,
+input[type=text]:not(.browser-default):focus:not([readonly])+label,
+input[type=password]:not(.browser-default):focus:not([readonly])+label,
+input[type=email]:not(.browser-default):focus:not([readonly])+label,
+input[type=url]:not(.browser-default):focus:not([readonly])+label,
+input[type=time]:not(.browser-default):focus:not([readonly])+label,
+input[type=date]:not(.browser-default):focus:not([readonly])+label,
+input[type=datetime]:not(.browser-default):focus:not([readonly])+label,
+input[type=datetime-local]:not(.browser-default):focus:not([readonly])+label,
+input[type=tel]:not(.browser-default):focus:not([readonly])+label,
+input[type=number]:not(.browser-default):focus:not([readonly])+label,
+input[type=search]:not(.browser-default):focus:not([readonly])+label,
+textarea.materialize-textarea:focus:not([readonly])+label {
+  color: #000;
+}
+
+.input-field .prefix.active {
+  color: #000;
+}
+
+/******************************************************
+* 6. MEDIA QUERIES
+*******************************************************/
+
+@media only screen and (max-width: 749px) {
+  /******************************************************
+* 7. MOBILE MENU
+*******************************************************/
+  #topbar {
+    display: none !important;
+  }
+  #menu-primary-items {
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    vertical-align: center;
+    margin-top: 0rem;
+  }
+  #menu-primary-items>ul {
+    margin-top: 10rem;
+  }
+  #menu-primary-items>li>a {
+    padding: 0rem 0px 0px 1rem;
+    background-color: black;
+  }
+  .mobilemenu-fixed .menu-toggle {
+    top: 0;
+    padding: 5px;
+    right: 0;
+    padding: 0;
+    left: 90%;
+    background: black;
+    color: white;
+    height: 2px;
+  }
+  #header>.hgrid>.table.hgrid-span-12 {
+    background-image: url("https://istyle-hamburg.com/wp-content/uploads/2018/11/LOGO_iStyle.png");
+    background-color: black;
+    height: 28rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #site-logo {
+    display: none;
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/******************************************************
+* END OF THE Fields OF MEDIA SCREENS
+*******************************************************/
+
+/* @TODO: MAIL INTEGRATION
+* INTEGRATE MAIL CHIMP INTO THE FORM SENDING PROCESS : https://mailchimp.com/pricing/
+*/

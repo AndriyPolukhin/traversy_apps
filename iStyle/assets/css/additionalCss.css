@@ -1,0 +1,237 @@
+@font-face {
+  font-family: 'kilsonburgregular';
+  src: url('wp-content/themes/dispatch-child/fonts/kilsonburg-webfont.woff2') format('woff2'),
+  url('wp-content/themes/dispatch-child/fonts/kilsonburg-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'vogamedium';
+  src: url('wp-content/themes/dispatch-child/fonts/voga-medium-webfont.woff2') format('woff2'),
+  url('wp-content/themes/dispatch-child/fonts/voga-medium-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Material Icons';
+  src: url('wp-content/themes/dispatch-child/fonts/MaterialIcons-Regular.woff2') format('woff2'),
+  url('wp-content/themes/dispatch-child/fonts/MaterialIcons-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('wp-content/themes/dispatch-child/fonts/Oswald-Regular.ttf') format('ttf'), url('wp-content/themes/dispatch-child/fonts/Oswald-Bold.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Barlow Semi Condensed';
+  src: url('wp-content/themes/dispatch-child/fonts/BarlowSemiCondensed-Regular.ttf') format('ttf'), url('wp-content/themes/dispatch-child/fonts/BarlowSemiCondensed-Bold.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/*************** MENU STYLING *************/
+#menu-primary-items>li>a {
+  padding: 4.5rem 0px 0px 10px;
+  font-family: 'kilsonburgregular';
+  text-transform: uppercase;
+  transition: all 0.5;
+}
+
+#menu-primary-items>li>a:hover {
+  color: #13aff0;
+}
+
+#site-logo-image img {
+  max-height: 8rem;
+  width: auto;
+}
+
+.headers {
+  font-family: 'Oswald', sans-serif;
+
+}
+.base-text, p {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+body * {
+	background: rgba(0,0,0,0)
+}
+
+.entry-content {
+	border: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.full-width {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.container {
+	width: 100%;
+	max-width: 1649px;
+}
+
+
+/* Fields */
+
+div.wpforms-container-full .wpforms-form input[type=date],
+div.wpforms-container-full .wpforms-form input[type=datetime],
+div.wpforms-container-full .wpforms-form input[type=datetime-local],
+div.wpforms-container-full .wpforms-form input[type=email],
+div.wpforms-container-full .wpforms-form input[type=month],
+div.wpforms-container-full .wpforms-form input[type=number],
+div.wpforms-container-full .wpforms-form input[type=password],
+div.wpforms-container-full .wpforms-form input[type=range],
+div.wpforms-container-full .wpforms-form input[type=search],
+div.wpforms-container-full .wpforms-form input[type=tel],
+div.wpforms-container-full .wpforms-form input[type=text],
+div.wpforms-container-full .wpforms-form input[type=time],
+div.wpforms-container-full .wpforms-form input[type=url],
+div.wpforms-container-full .wpforms-form input[type=week],
+div.wpforms-container-full .wpforms-form select,
+div.wpforms-container-full .wpforms-form textarea {
+  background-color: transparent;
+  /* Remove background fill */
+/*   text-transform: uppercase; */
+  /* Make text all uppercase */
+  border-radius: 0;
+  /* Remove corner curve */
+	border: none;
+  border-bottom: 1px solid black;
+  /* 2px white border */
+  color: #000;
+  /* White text */
+  height: 45px;
+  /* Increase input height */
+}
+
+::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: rgba(0,0,0,0.5);
+}
+
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+   color: rgba(0,0,0,0.5);
+  opacity: 1;
+}
+
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+   color: rgba(0,0,0,0.5);
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+   color: rgba(0,0,0,0.5);
+
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+   color: rgba(0,0,0,0.5);
+}
+
+/* Button */
+
+div.wpforms-container-full .wpforms-form input[type=submit],
+div.wpforms-container-full .wpforms-form button[type=submit],
+div.wpforms-container-full .wpforms-form .wpforms-page-button {
+/*   text-transform: uppercase; */
+  padding: 5px 25px;
+	border-radius: 10px;
+  color: white;
+  background: #000;
+  font-weight: normal;
+	font-size: 1.5rem;
+	font-family: 'Oswald', sans-serif;
+}
+
+div.wpforms-container-full .wpforms-form input[type=submit]:hover,
+div.wpforms-container-full .wpforms-form button[type=submit]:hover,
+div.wpforms-container-full .wpforms-form .wpforms-page-button:hover {
+	background: rgba(0,0,0,0.9)
+}
+
+
+div.wpforms-container-full .wpforms-form .wpforms-field-label-inline {
+	color: black;
+}
+
+div.wpforms-container-full .wpforms-form input[type=checkbox], div.wpforms-container-full .wpforms-form input[type=radio] {
+	opacity: 1;
+	background: transparent;
+	border: 1px solid black;
+}
+
+div.wpforms-container-full .wpforms-form .wpforms-field-label-inline > a {
+	color: royalblue;
+}
+
+#widgetized-template-page-content {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.modal {
+  background: black;
+
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.image-text {
+  text-align: center;
+  font-size: 3rem;
+  font-family: 'vogamedium';
+}
+
+
+
+
+
+
+@media only screen and (max-width: 748px) {
+  #menu-primary-items>li>a {
+    padding: 0rem 0px 0px 1rem;
+
+  }
+	#menu-primary-items {
+    border: none;
+    background-color: black;
+		vertical-align: center;
+    margin-top: 10rem;
+
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
