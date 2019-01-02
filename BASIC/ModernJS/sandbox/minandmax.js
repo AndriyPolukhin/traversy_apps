@@ -23,3 +23,25 @@ const arr2 = [1, 2, 3, 4, 5, 6, 7, 8, 9],
 
 console.log('the min is: ', min2);
 console.log('the max is: ', max2);
+
+/**
+ * RESTRICTING Number to Min/Max Range
+ */
+
+const clamp = (min, max, val) => {
+  console.log('The min:', min, 'The max:', max, 'The Val:', val);
+  return Math.min(Math.max(min, +val), max);
+}
+
+console.log('Restricting a number:',
+  clamp(-10, 10, "4.30")
+);
+console.log('Restricting a number:',
+  clamp(-10, 10, -8)
+);
+console.log('Restricting a number:',
+  clamp(-10, 10, 12)
+);
+console.log('Restricting a number:',
+  clamp(-10, 10, -15)
+);
