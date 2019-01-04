@@ -140,7 +140,7 @@ nav .sidenav-trigger {
 }
 
 #menu-primary-items>li {
-  /* right: -7rem; */
+  right: 0rem;
 }
 
 #menu-primary-items>li>a {
@@ -177,7 +177,7 @@ nav .sidenav-trigger {
   top: 0.5rem;
   max-height: 7rem;
   width: auto;
-  /* margin-left: -10%; */
+  margin-left: -1%;
 }
 
 #topbar {
@@ -204,6 +204,14 @@ nav .sidenav-trigger {
 #topbar ul>li>a:hover {
   color: #fff;
   text-decoration: none;
+}
+
+#topbar-right {
+  padding-right: 0px;
+}
+
+#topbar .hgrid-span-12 {
+  padding-right: 20px;
 }
 
 .inline-nav .widget_nav_menu li a {
@@ -491,6 +499,15 @@ textarea.materialize-textarea:focus:not([readonly])+label {
 
 .input-field .prefix.active {
   color: #000;
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="input"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus {
+  border: none;
 }
 
 /******************************************************
