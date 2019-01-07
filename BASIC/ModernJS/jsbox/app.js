@@ -1,44 +1,29 @@
-// Set local storage item;
-
-// localStorage.setItem('name', 'Andriy');
-// localStorage.setItem('age', '33');
-
-// session storage
-// sessionStorage.setItem('name', 'Anastasia');
-
-
-// remove from storage
-// localStorage.removeItem('name')
-
-// get from storage
-// const name = localStorage.getItem('name');
-// const age = localStorage.getItem('age');
-
-// localStorage.clear();
-// // clear localStorage
-// console.log(name, age);
-
-
-
-document.querySelector('form').addEventListener('submit', (e) => {
-  e.preventDefault();
-  const task = document.getElementById('task').value;
-  let tasks;
-
-  if (localStorage.getItem('tasks') === null) {
-    tasks = [];
-  } else {
-    tasks = JSON.parse(localStorage.getItem('tasks'));
+class Person {
+  constructor(firstname, lastname) {
+    this.firstname = firstname;
+    this.lastname = lastname;
   }
 
-  tasks.push(task);
+  greeting() {
+    return `hello there ${this.firstname} ${this.lastname}`;
+  }
+}
 
-  localStorage.setItem('tasks', JSON.stringify(tasks));
-  alert('Task Saved');
-});
+class Customer extends Person {
+  constructor(firstname, lastname, phone, membership) {
+    super(firstname, lastname);
 
-const tasks = JSON.parse(localStorage.getItem('tasks'));
+    this.phone = phone;
+    this.membership = membership;
+  }
 
-console.log(tasks);
+  static getMembershipCost() {
+    return 500;
+  }
+}
 
-tasks.forEach((task) => console.log(task))
+const andriy = new Customer('Andriy', 'Polukihn', '093-357-0119', 'delux');
+console.log(andriy);
+console.log(andriy.greeting());
+
+console.log(Customer.getMembershipCost());
