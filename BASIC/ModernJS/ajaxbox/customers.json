@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Andriy Polukhin",
+    "company": "Straum System's",
+    "phone": "38093-357-0119"
+  },
+  {
+    "id": 2,
+    "name": "Anastasia Tsukrova",
+    "company": "IStyle Hamburg",
+    "phone": "444-555-6666"
+  },
+  {
+    "id": 3,
+    "name": "Alexandra Invanova",
+    "company": "The Traveller",
+    "phone": "38067-254-7894"
+  }
+]

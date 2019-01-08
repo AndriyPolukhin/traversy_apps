@@ -88,6 +88,15 @@
   padding-bottom: 0;
 }
 
+#widgetized-template-page-content .slider-angebote {
+  position: relative;
+  top: -1rem;
+}
+
+.slider-angebote {
+  margin-bottom: -1rem !important;
+}
+
 /******************************************************
 * 2. MENU NAVIGATION
 *******************************************************/
@@ -215,7 +224,7 @@ nav .sidenav-trigger {
 }
 
 .inline-nav .widget_nav_menu li a {
-  margin: 0 0 0 0;
+  margin: 0 5px 0 0;
   position: relative;
 }
 
