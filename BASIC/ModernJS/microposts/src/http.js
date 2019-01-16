@@ -7,8 +7,8 @@
  *
  **/
 
-
 class EasyHTTP {
+
   // 1. Make a http get request
   async get(url) {
     const response = await fetch(url);
@@ -19,7 +19,7 @@ class EasyHTTP {
 
   // 2. Make a http post request
 
-    async post(url, data) {
+  async post(url, data) {
     const response = await fetch(url, {
       method: 'POST',
       headers: {
@@ -32,8 +32,7 @@ class EasyHTTP {
   }
 
   // 3. Make a http put request
-  as
-    ync put(url, data) {
+  async put(url, data) {
     const response = await fetch(url, {
       method: 'PUT',
       headers: {
@@ -47,8 +46,7 @@ class EasyHTTP {
   }
 
   // 4. Make a http delete request
-  as
-    ync delete(url) {
+  async delete(url) {
     const response = await fetch(url, {
       method: 'DELETE',
       headers: {
@@ -59,3 +57,6 @@ class EasyHTTP {
     return resData;
   }
 }
+
+
+export const http = new EasyHTTP();
