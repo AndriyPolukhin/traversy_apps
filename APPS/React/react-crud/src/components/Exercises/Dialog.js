@@ -32,11 +32,11 @@ export default class CreateDialog extends Component {
 
     return (
       <Fragment>
-        <Fab size="small" onClick={this.handleToggle}>
+        <Fab size="small" onClick={this.handleToggle} color="secondary">
           <AddIcon />
         </Fab>
 
-        <Dialog open={open} onClose={this.handleToggle}>
+        <Dialog open={open} onClose={this.handleToggle} fullWidth maxWidth="xs">
           <DialogTitle id="form-dialog-title">
             Create a New Exercise
           </DialogTitle>
