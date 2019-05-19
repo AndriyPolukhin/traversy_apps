@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment } from 'react';
 import {
   Grid,
   Paper,
@@ -9,17 +9,40 @@ import {
   ListItemSecondaryAction,
   IconButton,
   withStyles
-} from "@material-ui/core";
+} from '@material-ui/core';
 
-import { DeleteOutlined, EditOutlined } from "@material-ui/icons";
-import Form from "./Form";
+import { DeleteOutlined, EditOutlined } from '@material-ui/icons';
+import Form from './Form';
 
 const styles = theme => ({
-  Paper: {
-    padding: 20,
-    marginTop: 5,
-    height: 500,
-    overflow: "auto"
+  paper: {
+    padding: theme.spacing.unit * 2,
+    overflow: 'auto',
+    [theme.breakpoints.up('sm')]: {
+      height: 'calc(100% - 10px)',
+      marginTop: 5
+    },
+    [theme.breakpoints.down('xs')]: {
+      height: '100%'
+    }
+  },
+  '@global': {
+    'html, body, #root': {
+      height: '100%'
+    }
+  },
+  container: {
+    [theme.breakpoints.up('sm')]: {
+      height: 'calc(100% - 64px  - 48px)'
+    },
+    [theme.breakpoints.down('xs')]: {
+      height: 'calc(100% - 56px  - 48px)'
+    }
+  },
+  item: {
+    [theme.breakpoints.down('xs')]: {
+      height: '50%'
+    }
   }
 });
 
@@ -35,15 +58,15 @@ export default withStyles(styles)(
     exercise,
     exercise: {
       id,
-      title = "Welcome!",
-      description = "Please select an exercise from the list on the left"
+      title = 'Welcome!',
+      description = 'Please select an exercise from the list on the left'
     },
     onDelete,
     onSelectEdit
   }) => (
-    <Grid container>
-      <Grid item sm={6} xs={12}>
-        <Paper className={classes.Paper}>
+    <Grid container className={classes.container}>
+      <Grid item sm={6} xs={12} className={classes.item}>
+        <Paper className={classes.paper}>
           {exercises.map(([group, exercises]) =>
             !category || category === group ? (
               <Fragment key={group}>
@@ -52,7 +75,7 @@ export default withStyles(styles)(
                   variant="h5"
                   color="secondary"
                   style={{
-                    textTransform: "capitalize"
+                    textTransform: 'capitalize'
                   }}
                 >
                   {group}
@@ -83,8 +106,8 @@ export default withStyles(styles)(
           )}
         </Paper>
       </Grid>
-      <Grid item sm={6} xs={12}>
-        <Paper className={classes.Paper}>
+      <Grid item sm={6} xs={12} className={classes.item}>
+        <Paper className={classes.paper}>
           <Typography variable="display1" gutterBottom color="secondary">
             {title}
           </Typography>

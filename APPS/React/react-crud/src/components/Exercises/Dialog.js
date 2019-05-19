@@ -1,15 +1,16 @@
-import React, { Fragment, Component } from "react";
+import React, { Fragment, Component } from 'react';
 import {
   Dialog,
   DialogContent,
   DialogContentText,
   DialogTitle
-} from "@material-ui/core";
-import Fab from "@material-ui/core/Fab";
-import AddIcon from "@material-ui/icons/Add";
-import Form from "./Form";
+} from '@material-ui/core';
+import Fab from '@material-ui/core/Fab';
+import AddIcon from '@material-ui/icons/Add';
+import Form from './Form';
+import { withContext } from '../../context';
 
-export default class CreateDialog extends Component {
+class CreateDialog extends Component {
   state = {
     open: false
   };
@@ -29,7 +30,6 @@ export default class CreateDialog extends Component {
   render() {
     const { open } = this.state;
     const { muscles } = this.props;
-
     return (
       <Fragment>
         <Fab size="small" onClick={this.handleToggle} color="secondary">
@@ -51,3 +51,5 @@ export default class CreateDialog extends Component {
     );
   }
 }
+
+export default withContext(CreateDialog);
