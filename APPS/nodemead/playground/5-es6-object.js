@@ -8,7 +8,7 @@ const user = {
   location: 'Kiyv'
 };
 
-// console.log(user);
+console.log(user);
 
 // Obect destructuring
 const product = {
@@ -25,7 +25,7 @@ const product = {
 // console.log(stock);
 // console.log(rating);
 
-const transaction = (type, { label, stock }) => {
+const transaction = (type, { label, stock = 0 } = {}) => {
   console.log(type, label, stock);
 };
 
